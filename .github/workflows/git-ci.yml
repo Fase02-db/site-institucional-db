@@ -6,14 +6,41 @@ on:
       - main
       - dev
       - test
+      - 'feature/**'
+      - 'bugfix/**'
+      - 'hotfix/**'
   pull_request:
     branches:
       - main
       - dev
       - test
+      - 'feature/**'
+      - 'feat/**'
+      - 'bugfix/**'
+      - 'hotfix/**'
 
 jobs:
-  build-and-test:
+
+  validate-branch:
+    name: Validate Branch
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Validate branch name
+      run: |
+        ALLOWED_BRANCHES="main dev test feature/ feat/ bugfix/ hotfix/"
+        BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+
+        if ! echo "$ALLOWED_BRANCHES" | grep -wq "$BRANCH_NAME"; then
+          echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
+          exit 1
+        fi
+
+  build:
+    name: Build Project
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,6 +57,45 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - name: Verify Node.js version
+      run: |
+        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+          exit 1
+        fi
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+  lint-and-test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    needs: build
+
+    strategy:
+      matrix:
+        node-version: [20.16.0]
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Verify Node.js version
+      run: |
+        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+          exit 1
+        fi
+
     - name: Install dependencies
       run: npm install
 
@@ -38,6 +104,3 @@ jobs:
 
     - name: Run tests with Jest
       run: npm test
-
-    - name: Build project
-      run: npm run build
