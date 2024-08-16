@@ -1,19 +1,14 @@
-import type { Config } from 'jest';
-
-const config: Config = {
-  testEnvironment: 'jsdom',
-
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
-
+// jest.config.ts
+import type { JestConfigWithTsJest } from 'ts-jest';
+ 
+const config: JestConfigWithTsJest = {
+  preset: 'ts-jest',
+  testEnvironment: 'jest-environment-jsdom',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transform: {
-    '^.+\\.tsx?$': 'babel-jest', // Transformação para TypeScript
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/__mocks__/fileMock.ts',
-  },
+  testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],
 };
-
+ 
 export default config;

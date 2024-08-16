@@ -5,7 +5,7 @@ Object.defineProperty(window, 'matchMedia', {
   value: jest.fn().mockImplementation((query: string) => ({
     matches: false,
     media: query,
-    onchange: null as unknown as (this: MediaQueryList, ev: MediaQueryListEvent) => any,
+    onchange: null as unknown as (this: MediaQueryList, ev: MediaQueryListEvent) => void,
     addListener: jest.fn(),
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
