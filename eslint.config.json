@@ -1,0 +1,48 @@
+{
+  "ignorePatterns": ["node_modules/", "dist/", "env.d.ts"],
+  "overrides": [
+    {
+      "files": ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+      "languageOptions": {
+        "globals": {
+          "browser": true
+        }
+      },
+      "extends": [
+        "eslint:recommended",
+        "@typescript-eslint/recommended",
+        "plugin:react/recommended"
+      ],
+      "rules": {
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": true,
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "react/jsx-no-target-blank": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "no-console": "warn",
+        "quotes": ["error", "single"],
+        "no-undef": "error",
+        "eqeqeq": ["error", "always"],
+        "curly": ["error", "all"],
+        "no-trailing-spaces": "error",
+        "indent": ["error", 2],
+        "no-whitespace-before-property": "error",
+        "no-multiple-empty-lines": [
+          "error",
+          {
+            "max": 1,
+            "maxEOF": 1,
+            "maxBOF": 0
+          }
+        ]
+      }
+    }
+  ]
+}
