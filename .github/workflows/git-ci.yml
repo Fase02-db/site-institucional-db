@@ -9,6 +9,7 @@ on:
       - 'feature/**'
       - 'bugfix/**'
       - 'hotfix/**'
+      - 'feat/**'
   pull_request:
     branches:
       - main
@@ -20,24 +21,36 @@ on:
       - 'hotfix/**'
 
 jobs:
-
   validate-branch:
     name: Validate Branch
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v3
 
-    - name: Validate branch name
-      run: |
-        ALLOWED_BRANCHES="main dev test feature/ feat/ bugfix/ hotfix/"
-        BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+      - name: Validate branch name
+        run: |
+            ALLOWED_BRANCHES="main dev test feature/ feat/ bugfix/ hotfix/"
+          # Determine the context and extract the branch name
+          if [[ "${GITHUB_REF}" == refs/pull/* ]]; then
+            # For pull requests, use the base branch name
+            BRANCH_NAME=$(jq --raw-output .pull_request.base.ref "$GITHUB_EVENT_PATH")
+          else
+            # For normal pushes, extract the branch name directly
+            BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+          fi
 
-        if ! echo "$ALLOWED_BRANCHES" | grep -wq "$BRANCH_NAME"; then
+          # Check if branch name matches any of the allowed patterns
+          for PREFIX in $ALLOWED_BRANCHES; do
+            if [[ "$BRANCH_NAME" == $PREFIX* ]]; then
+              exit 0
+            fi
+          done
+
           echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
           exit 1
-        fi
+        shell: /usr/bin/bash -e {0}
 
   build:
     name: Build Project
@@ -48,27 +61,27 @@ jobs:
         node-version: [20.16.0]
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-    - name: Verify Node.js version
-      run: |
-        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
-          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
-          exit 1
-        fi
+      - name: Verify Node.js version
+        run: |
+          if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+            echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+            exit 1
+          fi
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build project
-      run: npm run build
+      - name: Build project
+        run: npm run build
 
   lint-and-test:
     name: Lint and Test
@@ -80,27 +93,27 @@ jobs:
         node-version: [20.16.0]
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-    - name: Verify Node.js version
-      run: |
-        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
-          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
-          exit 1
-        fi
+      - name: Verify Node.js version
+        run: |
+          if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+            echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+            exit 1
+          fi
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run ESLint
-      run: npm run lint
+      - name: Run ESLint
+        run: npm run lint
 
-    - name: Run tests with Jest
-      run: npm test
+      - name: Run tests with Jest
+        run: npm test
