@@ -35,10 +35,14 @@ jobs:
         ALLOWED_BRANCHES="main dev test feature/ feat/ bugfix/ hotfix/"
         BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
 
-        if ! echo "$ALLOWED_BRANCHES" | grep -wq "$BRANCH_NAME"; then
-          echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
-          exit 1
-        fi
+        for PREFIX in $ALLOWED_BRANCHES; do
+            if [[ "$BRANCH_NAME" == $PREFIX* ]]; then
+              exit 0
+            fi
+        done
+
+        echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
+        exit 1
 
   build:
     name: Build Project
