@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@font-face {
+
+    font-family: 'TTSupermolot-Regular';
+
+    src: url('../Fontes/supermolot-ttf/TT-Supermolot-Regular.ttf') format("truetype");
+
+}
+
+@font-face {
+    font-family: 'TTSupermolot-Bold';
+    src: url('../Fontes/supermolot-ttf/TT-Supermolot-Bold.ttf') format("truetype");
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+}
