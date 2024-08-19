@@ -10,7 +10,6 @@ on:
       - 'feat/**'
       - 'bugfix/**'
       - 'hotfix/**'
-      - 'feat/**'
   pull_request:
     branches:
       - main
@@ -22,13 +21,14 @@ on:
       - 'hotfix/**'
 
 jobs:
+
   validate-branch:
     name: Validate Branch
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+    - name: Check out code
+      uses: actions/checkout@v3
 
     - name: Validate branch name
       run: |
@@ -62,27 +62,27 @@ jobs:
         node-version: [20.16.0]
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+    - name: Check out code
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
-      - name: Verify Node.js version
-        run: |
-          if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
-            echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
-            exit 1
-          fi
+    - name: Verify Node.js version
+      run: |
+        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+          exit 1
+        fi
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build project
-        run: npm run build
+    - name: Build project
+      run: npm run build
 
   lint-and-test:
     name: Lint and Test
@@ -94,27 +94,27 @@ jobs:
         node-version: [20.16.0]
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+    - name: Check out code
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
-      - name: Verify Node.js version
-        run: |
-          if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
-            echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
-            exit 1
-          fi
+    - name: Verify Node.js version
+      run: |
+        if [ "$(node -v)" != "v${{ matrix.node-version }}" ]; then
+          echo "Node.js version mismatch. Expected v${{ matrix.node-version }} but got $(node -v)"
+          exit 1
+        fi
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Run ESLint
-        run: npm run lint
+    - name: Run ESLint
+      run: npm run lint
 
-      - name: Run tests with Jest
-        run: npm test
+    - name: Run tests with Jest
+      run: npm test
