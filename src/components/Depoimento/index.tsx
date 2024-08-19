@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import imagemExemplo from "../../imagens/fotoExemplo.jfif"
-
+import styled from 'styled-components';
+import imagemExemplo from '../../imagens/fotoExemplo.jfif'
 
 const Container = styled.div`
     width: 987px;
@@ -62,7 +61,6 @@ const Imagem = styled.img`
     object-fit: cover;  
 `
 
-
 const Autor = styled.p `
     font-family: TTSupermolot-Bold, sans-serif;
     font-weight: bold;  
@@ -70,26 +68,25 @@ const Autor = styled.p `
     margin-top: 36px;
 `;
 
-
 function Depoimento(){
-    return(
-        <Container>
-            <ContainerDeDepoimento>
-                <Titulo> Depoimento</Titulo>
-                <Texto>
+  return(
+    <Container>
+      <ContainerDeDepoimento>
+        <Titulo> Depoimento</Titulo>
+        <Texto>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.Nihil non similique expedita, placeat rem quis deserunt eos eaque aperiam a neque qui ipsum nisi rerum reiciendis veritatis, vel, ipsam ratione?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.Nihil non similique expedita, placeat rem quis deserunt eos eaque aperiam a neque qui ipsum nisi rerum reiciendis veritatis, vel, ipsam ratione?
-                   
-                </Texto>
-                <Autor>Maria Silva, PO da Tech Innovations</Autor>
-              
-            </ContainerDeDepoimento>
 
-            <ContainerDeFoto>
-                <Imagem src={imagemExemplo}/>
-            </ContainerDeFoto>
+        </Texto>
+        <Autor>Maria Silva, PO da Tech Innovations</Autor>
 
-        </Container>
-    )
+      </ContainerDeDepoimento>
+
+      <ContainerDeFoto>
+        <Imagem src={imagemExemplo}/>
+      </ContainerDeFoto>
+
+    </Container>
+  )
 }
 export default Depoimento
