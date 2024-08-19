@@ -46,7 +46,6 @@ jobs:
 
           echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
           exit 1
-    - shell: /usr/bin/bash -e {0}
 
   build:
     name: Build Project
