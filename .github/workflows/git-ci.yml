@@ -33,16 +33,25 @@ jobs:
     - name: Validate branch name
       run: |
         ALLOWED_BRANCHES="main dev test feature/ feat/ bugfix/ hotfix/"
-        BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+        # Determina o contexto e extrai o nome do branch
+        if [[ "${GITHUB_REF}" == refs/pull/* ]]; then
+          # Para pull requests, usa o nome do branch base
+          BRANCH_NAME=$(jq --raw-output .pull_request.base.ref "$GITHUB_EVENT_PATH")
+        else
+          # Para pushs normais, extrai o nome do branch diretamente
+          BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+        fi
 
+        # Verifica se o nome do branch corresponde a algum dos padrões permitidos
         for PREFIX in $ALLOWED_BRANCHES; do
-            if [[ "$BRANCH_NAME" == $PREFIX* ]]; then
-              exit 0
-            fi
+          if [[ "$BRANCH_NAME" == $PREFIX* ]]; then
+            exit 0
+          fi
         done
 
-        echo "Branch name '$BRANCH_NAME' is not allowed. Allowed branches are: $ALLOWED_BRANCHES"
+        echo "Nome do branch '$BRANCH_NAME' não é permitido. Branches permitidos são: $ALLOWED_BRANCHES"
         exit 1
+      shell: bash
 
   build:
     name: Build Project
