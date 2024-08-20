@@ -13,6 +13,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": false,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "noEmit": true,
     "jsx": "react-jsx"
   },
