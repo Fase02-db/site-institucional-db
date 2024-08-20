@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import imagemExemplo from '../../imagens/fotoExemplo.jfif'
+import React from 'react';
 
 const Container = styled.div`
     width: 987px;
@@ -46,7 +46,7 @@ const Titulo = styled.h1`
     font-size: 28px;
     
 `
-const Texto = styled.p `
+const Texto = styled.p`
     width: 426px;
     height: 76px;  
     font-family: 'Roboto Flex', sans-serif;
@@ -61,32 +61,42 @@ const Imagem = styled.img`
     object-fit: cover;  
 `
 
-const Autor = styled.p `
+const Autor = styled.p`
     font-family: TTSupermolot-Bold, sans-serif;
     font-weight: bold;  
     font-size: 14px;
     margin-top: 36px;
 `;
 
-function Depoimento(){
+interface DepoimentoComponentProps {
+  titulo: string;
+  texto: string;
+  autor: string;
+  img?: string;
+}
+
+const DepoimentoComponent: React.FC<DepoimentoComponentProps> = ({titulo, texto,autor,img}) => {
   return(
-    <Container>
+    <>
+      <Container>
       <ContainerDeDepoimento>
-        <Titulo> Depoimento</Titulo>
+        <Titulo>{titulo}</Titulo>
         <Texto>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.Nihil non similique expedita, placeat rem quis deserunt eos eaque aperiam a neque qui ipsum nisi rerum reiciendis veritatis, vel, ipsam ratione?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.Nihil non similique expedita, placeat rem quis deserunt eos eaque aperiam a neque qui ipsum nisi rerum reiciendis veritatis, vel, ipsam ratione?
+          {texto} 
 
         </Texto>
-        <Autor>Maria Silva, PO da Tech Innovations</Autor>
+        <Autor>{autor}</Autor>
 
       </ContainerDeDepoimento>
 
       <ContainerDeFoto>
-        <Imagem src={imagemExemplo}/>
+        < Imagem src={img} />
       </ContainerDeFoto>
 
     </Container>
-  )
+    </>
+
+  );
 }
-export default Depoimento
+export default DepoimentoComponent;
+
