@@ -79,21 +79,21 @@ const DepoimentoComponent: React.FC<DepoimentoComponentProps> = ({titulo, texto,
   return(
     <>
       <Container>
-      <ContainerDeDepoimento>
-        <Titulo>{titulo}</Titulo>
-        <Texto>
-          {texto} 
+        <ContainerDeDepoimento>
+          <Titulo>{titulo}</Titulo>
+          <Texto>
+            {texto}
 
-        </Texto>
-        <Autor>{autor}</Autor>
+          </Texto>
+          <Autor>{autor}</Autor>
 
-      </ContainerDeDepoimento>
+        </ContainerDeDepoimento>
 
-      <ContainerDeFoto>
-        < Imagem src={img} />
-      </ContainerDeFoto>
+        <ContainerDeFoto>
+          < Imagem src={img} />
+        </ContainerDeFoto>
 
-    </Container>
+      </Container>
     </>
 
   );
