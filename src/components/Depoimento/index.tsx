@@ -22,7 +22,7 @@ const ContainerDeDepoimento = styled.div`
     background-color: #414ABA;
     border-radius: 8px;
     color: #fff;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Roboto Flex';
     font-weight: 400;
     text-align: left;
     
@@ -49,7 +49,7 @@ const Titulo = styled.h1`
 const Texto = styled.p`
     width: 426px;
     height: 76px;  
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Roboto Flex';
     font-weight: 400;  
     font-size: 16px;
     line-height: 18.65px;
@@ -62,7 +62,7 @@ const Imagem = styled.img`
 `
 
 const Autor = styled.p`
-    font-family: TTSupermolot-Bold, sans-serif;
+    font-family: TTSupermolot-Bold;
     font-weight: bold;  
     font-size: 14px;
     margin-top: 36px;
