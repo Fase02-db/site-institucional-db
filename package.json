@@ -63,8 +63,5 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setup-tests.js"
     ]
-
   }
-
-
 }
