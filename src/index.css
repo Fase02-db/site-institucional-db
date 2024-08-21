@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@font-face {
+  font-family: 'TTSupermolot-Regular';
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTSupermolot-Bold';
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
