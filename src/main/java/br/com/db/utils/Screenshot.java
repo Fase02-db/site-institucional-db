@@ -1,0 +1,22 @@
+package br.com.db.utils;
+
+import br.com.db.webdrivers.DriverManager;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.service.ExtentTestManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+public class Screenshot {
+    public static MediaEntityModelProvider capture() {
+        String base64image = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+
+        try {
+            return MediaEntityBuilder.createScreenCaptureFromBase64String(base64image).build();
+        } catch (Exception e) {
+            ExtentTestManager.getTest().log(Status.FAIL, "Não foi possível gear uma evidência!");
+        }
+        return null;
+    }
+}
