@@ -58,7 +58,8 @@ const Texto = styled.p`
 const Imagem = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover; 
+    border-radius: 8px; 
 `
 
 const Autor = styled.p`
