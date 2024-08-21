@@ -34,7 +34,6 @@ const ContainerDeFoto = styled.div`
     border-radius: 8px;
     justify-content: center;
     flex-direction: column;
-    border: solid 1px #000;
 `;
 
 const Titulo = styled.h1`
