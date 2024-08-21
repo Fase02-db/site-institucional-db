@@ -12,8 +12,8 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "types": ["node", "jest", "@testing-library/jest-dom"],
     "isolatedModules": false,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "noEmit": true,
     "jsx": "react-jsx"
   },
