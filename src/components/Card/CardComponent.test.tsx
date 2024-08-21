@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import CardComponent from './CardComponent' // ajuste o caminho conforme necessário
+import CardComponent from '.' // ajuste o caminho conforme necessário
 
 const mockProps = {
   img: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',

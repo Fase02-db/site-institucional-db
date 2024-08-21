@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const { Text } = Typography
 
 const StyledCard = styled(Card)`
+  background-color: #f6f7f5;
   width: 306px;
   &:hover,
   &:focus {
@@ -19,6 +20,7 @@ const Titulo = styled.h4`
   line-height: 29.64px;
   text-align: left;
   margin: 0;
+  pagging-top: 0;
 `
 
 const CategoryText = styled(Text)`
@@ -35,7 +37,7 @@ const Resumo = styled(Text)`
   color: #292929;
 `
 const Botao = styled(Button)`
-  width: 274px;
+  width: 250px;
   height: 44px;
   padding: 8px 16px;
   border-radius: 6px;
