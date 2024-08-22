@@ -18,16 +18,16 @@ const Item = styled.div`
   }
 `;
 
-interface ServiceItemProps {
+interface ItemProps {
   titulo: string;
   descricao: string;
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ titulo, descricao }) => (
+const ItemServico: React.FC<ItemProps> = ({ titulo, descricao }) => (
   <Item>
     <h3>{titulo}</h3>
     <p>{descricao}</p>
   </Item>
 );
 
-export default ServiceItem;
+export default ItemServico;

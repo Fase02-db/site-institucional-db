@@ -1,24 +1,24 @@
 import { Col, Row } from 'antd';
 import React from 'react';
-import ServicoItem from './ServicoItem';
+import ItemServico from './ItemServico';
 
 interface Servico {
   titulo: string;
   descricao: string;
 }
 
-interface ServicoListProps {
+interface ListaServicoProps {
   servicos: Servico[];
 }
 
-const ServicoList: React.FC<ServicoListProps> = ({ servicos }) => (
+const ListaServico: React.FC<ListaServicoProps> = ({ servicos }) => (
   <Row gutter={[111.84, 25]}>
     {servicos.map((servico, index) => (
       <Col xs={24} sm={12} key={index}>
-        <ServicoItem titulo={servico.titulo} descricao={servico.descricao} />
+        <ItemServico titulo={servico.titulo} descricao={servico.descricao} />
       </Col>
     ))}
   </Row>
 );
 
-export default ServicoList;
+export default ListaServico;

@@ -1,26 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import servicosData from './servicos.json';
-import ServicoList from './ServicoList';
+import ListaServico from './ListaServicos';
 
 const SectionContainer = styled.div`
   text-align: center;
   padding: 50px 20px;
 `;
 
-const SectionTitle = styled.h2`
+const TituloSecao = styled.h2`
   font-size: 36px;
   margin-bottom: 40px;
   font-family: 'TTSupermolot-Bold', sans-serif;
 `;
 
-const Servicos: React.FC = () => {
+const ServicosComponent: React.FC = () => {
   return (
     <SectionContainer>
-      <SectionTitle>Serviços oferecidos</SectionTitle>
-      <ServicoList servicos={servicosData} />
+      <TituloSecao>Serviços oferecidos</TituloSecao>
+      <ListaServico servicos={servicosData} />
     </SectionContainer>
   );
 };
 
-export default Servicos;
+export default ServicosComponent;

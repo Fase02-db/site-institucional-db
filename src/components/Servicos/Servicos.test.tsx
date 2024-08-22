@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Servicos from './Servicos';
+import Servicos from './ServicosComponent';
 
 describe('Testes Servicos', () => {
   it('Deve renderizar os servicos', () => {
