@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import servicosData from './servicos.json';
-import ListaServico from './ListaServicos';
+import ListaInformacoes from '../SecaoInformativa/ListaInformativa';
+import servicosInformacoes from './servicos.json';
 
 const SectionContainer = styled.div`
   text-align: center;
@@ -18,7 +18,7 @@ const ServicosComponent: React.FC = () => {
   return (
     <SectionContainer>
       <TituloSecao>Serviços oferecidos</TituloSecao>
-      <ListaServico servicos={servicosData} />
+      <ListaInformacoes informacoes={servicosInformacoes} />
     </SectionContainer>
   );
 };

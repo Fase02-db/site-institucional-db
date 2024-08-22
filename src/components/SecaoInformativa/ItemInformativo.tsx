@@ -23,11 +23,11 @@ interface ItemProps {
   descricao: string;
 }
 
-const ItemServico: React.FC<ItemProps> = ({ titulo, descricao }) => (
+const ItemInformativo: React.FC<ItemProps> = ({ titulo, descricao }) => (
   <Item>
     <h3>{titulo}</h3>
     <p>{descricao}</p>
   </Item>
 );
 
-export default ItemServico;
+export default ItemInformativo;
