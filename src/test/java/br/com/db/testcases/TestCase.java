@@ -1,4 +1,4 @@
-package br.com.db;
+package br.com.db.testcases;
 
 import br.com.db.utils.BaseTest;
 import br.com.db.utils.LoggerFactory;
