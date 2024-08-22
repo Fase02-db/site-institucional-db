@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import BeneficiosComponent from './BeneficiosComponent';
 
-describe('Testes Servicos', () => {
-  it('Deve renderizar os servicos', () => {
+describe('Testes benefícios', () => {
+  it('Deve renderizar os benefícios', () => {
     render(<BeneficiosComponent />);
 
     expect(screen.getByText('Nossos benefícios')).toBeInTheDocument();
