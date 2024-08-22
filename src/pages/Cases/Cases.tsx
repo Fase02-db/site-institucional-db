@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Servicos from '../../components/Servicos/ServicosComponent';
+import Servicos from '../../components/SecaoInformativa/Servicos/ServicosComponent';
 
 const Cases: React.FC = () => {
   return (

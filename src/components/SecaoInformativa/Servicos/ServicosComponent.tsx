@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ListaInformacoes from '../SecaoInformativa/ListaInformativa';
+import ListaInformacoes from '../ListaInformativa';
 import servicosInformacoes from './servicos.json';
 
 const SectionContainer = styled.div`
