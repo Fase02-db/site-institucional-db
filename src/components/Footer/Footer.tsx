@@ -17,14 +17,14 @@ const Background = styled.div`
 `;
 
 const Footer: React.FC = () => {
-    return (
-        <Footer1>
-            <Background>
-                <img src="public/logoABC.png" alt="Logo" />
-                <Direitos>Todos os Direitos Reservados</Direitos>
-            </Background>
-        </Footer1>
-    );
+  return (
+    <Footer1>
+      <Background>
+        <img src="public/logoABC.png" alt="Logo" />
+        <Direitos>Todos os Direitos Reservados</Direitos>
+      </Background>
+    </Footer1>
+  );
 };
 
 export default Footer;
