@@ -13,7 +13,7 @@ public class TestCase extends BaseTest {
     }
 
     @Test
-    public void paraTesteAbrirOBrowser() {
-        LoggerFactory.log_INFO("Gol!");
+    public void test() {
+
     }
 }
