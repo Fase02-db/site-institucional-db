@@ -77,31 +77,26 @@ const Formulario: React.FC = () => {
 
   const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>)=>{
     const valor = nome.target.value;
-    console.log('O nome digitado foi = '+ valor)
     setNome(valor);
   }
 
   const handlerTelefone = (telefone: React.ChangeEvent<HTMLInputElement>)=>{
     const valor = telefone.target.value;
-    console.log('O telefone digitado foi = '+ valor);
     setTelefone(valor);
   }
 
   const handlerEmail = (email: React.ChangeEvent<HTMLInputElement>)=>{
     const valor = email.target.value;
-    console.log('O email digitado foi = '+valor);
     setEmail(valor);
   }
 
   const handlerAssunto = (assunto: React.ChangeEvent<HTMLInputElement>)=>{
     const valor = assunto.target.value;
-    console.log('O assunto digitado foi = '+valor);
     setAssunto(valor);
   }
 
   const handlerMensagem = (mensagem: React.ChangeEvent<HTMLTextAreaElement>)=>{
     const valor = mensagem.target.value;
-    console.log('A mensagem digitada foi = '+valor);
     setMensagen(valor);
   }
 
