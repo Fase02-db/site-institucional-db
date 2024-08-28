@@ -39,7 +39,7 @@ const DivAreaDeTexto = styled.div`
   margin-top: 12px;
   border: 1px solid #292929;
 `
-const {TextArea} = Input; 
+const {TextArea} = Input;
 
 const BotaoEnviar = styled(Button)`
   width: 200px;
@@ -104,12 +104,12 @@ const Formulario: React.FC = () => {
 
   const enviarFormulario = async (): Promise<void> => {
     console.log('Entrou em enviar');
-};
+  };
 
   return (
 
-  <DivContainer>
-  
+    <DivContainer>
+
       <Titulo>Entre em contato</Titulo>
       <SubTitulo>
         Envie um e-mail através do formulário abaixo ou fale com a nossa equipe através
@@ -123,73 +123,73 @@ const Formulario: React.FC = () => {
               name="nome"
               rules={[{ required: true, message: 'Entre co seu nome.' }]}
               style={{margin:'0px'}}
-            >  
+            >
               <DivInput>
                 <RotuloDeCampo>Nome</RotuloDeCampo>
-                    <Input style={{border:'none', boxShadow:'none'}}
-                        value={nome}
-                        onChange={handlerNome}
-                    />
-              </DivInput> 
+                <Input style={{border:'none', boxShadow:'none'}}
+                  value={nome}
+                  onChange={handlerNome}
+                />
+              </DivInput>
             </Form.Item>
 
             <Form.Item
               name="telefone"
               rules={[{ required: true, message: 'Por favor, informe seu telefone!' }]}
-            >  
-                <DivInput>
+            >
+              <DivInput>
                 <RotuloDeCampo>Telefone</RotuloDeCampo>
-                    <Input style={{border:'none', boxShadow:'none'}}
-                      value={telefone}
-                      onChange={handlerTelefone}
-                    />
-              </DivInput> 
+                <Input style={{border:'none', boxShadow:'none'}}
+                  value={telefone}
+                  onChange={handlerTelefone}
+                />
+              </DivInput>
             </Form.Item>
           </div>
-        
-        <div style={{width:'637px'}}>
-            <Form.Item
-                name="email"
-                rules={[{ required: true, message: 'Por favor, informe seu email!' }]}
-                style={{margin:'0px'}}
-              >  
-                  <DivInput>
-                    <RotuloDeCampo>E-mail</RotuloDeCampo>
-                        <Input style={{border:'none', boxShadow:'none'}}
-                          value={email}
-                          onChange={handlerEmail}
-                        />
-                  </DivInput> 
-              </Form.Item>
 
-              <Form.Item
-                name="assunto"
-                rules={[{ required: true, message: 'Por favor, informe o assunto!' }]}
-              >  
-                  <DivInput>
-                    <RotuloDeCampo>Assunto</RotuloDeCampo>
-                    <Input style={{border:'none', boxShadow:'none'}}
-                      value={assunto}
-                      onChange={handlerAssunto}
-                    />
-                  </DivInput> 
-              </Form.Item>
-        </div>
+          <div style={{width:'637px'}}>
+            <Form.Item
+              name="email"
+              rules={[{ required: true, message: 'Por favor, informe seu email!' }]}
+              style={{margin:'0px'}}
+            >
+              <DivInput>
+                <RotuloDeCampo>E-mail</RotuloDeCampo>
+                <Input style={{border:'none', boxShadow:'none'}}
+                  value={email}
+                  onChange={handlerEmail}
+                />
+              </DivInput>
+            </Form.Item>
+
+            <Form.Item
+              name="assunto"
+              rules={[{ required: true, message: 'Por favor, informe o assunto!' }]}
+            >
+              <DivInput>
+                <RotuloDeCampo>Assunto</RotuloDeCampo>
+                <Input style={{border:'none', boxShadow:'none'}}
+                  value={assunto}
+                  onChange={handlerAssunto}
+                />
+              </DivInput>
+            </Form.Item>
+          </div>
         </DivCampos>
 
         <DivAreaDeTexto >
 
           <Form.Item
-                name="mensagem"
-                rules={[{ required: true, message: 'Por favor, escreva sua mensagem!' }]}
-          >  
-          <RotuloDeCampo>Mensagem</RotuloDeCampo>
-          <TextArea
+            name="mensagem"
+            rules={[{ required: true, message: 'Por favor, escreva sua mensagem!' }]}
+          >
+            <RotuloDeCampo>Mensagem</RotuloDeCampo>
+            <TextArea
               style={{border:'none'}}
               rows={6}
-              value={nome}
+              value={mensagem}
               onChange={handlerMensagem}
-          /> 
+            />
           </Form.Item>
         </DivAreaDeTexto>
         <div style={{textAlign:'right'}}>
@@ -199,9 +199,9 @@ const Formulario: React.FC = () => {
             Enviar
           </BotaoEnviar>
         </div>
-      
+
       </DivFormulario>
-  </DivContainer>
+    </DivContainer>
   );
 };
 export default Formulario;

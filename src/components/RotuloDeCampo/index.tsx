@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 export const RotuloDeCampo = styled.p`
     width: 100px;    
