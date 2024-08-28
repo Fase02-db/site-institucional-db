@@ -64,7 +64,6 @@ const DivInput = styled.div`
     border-radius: 8px;
     display:flex;
 `
-
 const Formulario: React.FC = () => {
 
   const [nome, setNome] = useState<string>('');
