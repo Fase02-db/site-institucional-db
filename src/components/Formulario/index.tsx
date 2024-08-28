@@ -64,6 +64,9 @@ const DivInput = styled.div`
     border-radius: 8px;
     display:flex;
 `
+const DivStyled = styled.div`
+   height: 100%;
+`
 const Formulario: React.FC = () => {
 
   const [nome, setNome] = useState<string>('');
@@ -118,10 +121,10 @@ const Formulario: React.FC = () => {
 
       <DivFormulario>
         <DivCampos>
-          <div style={{display:'block', width:'328px',height:'100%'}}>
+          <DivStyled style={{display:'block', width:'328px'}}>
             <Form.Item
               name="nome"
-              rules={[{ required: true, message: 'Entre co seu nome.' }]}
+              rules={[{ required: true, message: 'Entre com seu nome.' }]}
               style={{margin:'0px'}}
             >
               <DivInput>
@@ -145,9 +148,9 @@ const Formulario: React.FC = () => {
                 />
               </DivInput>
             </Form.Item>
-          </div>
+          </DivStyled>
 
-          <div style={{width:'637px'}}>
+          <DivStyled style={{width:'637px'}}>
             <Form.Item
               name="email"
               rules={[{ required: true, message: 'Por favor, informe seu email!' }]}
@@ -174,7 +177,7 @@ const Formulario: React.FC = () => {
                 />
               </DivInput>
             </Form.Item>
-          </div>
+          </DivStyled>
         </DivCampos>
 
         <DivAreaDeTexto >
@@ -192,13 +195,13 @@ const Formulario: React.FC = () => {
             />
           </Form.Item>
         </DivAreaDeTexto>
-        <div style={{textAlign:'right'}}>
+        <DivStyled style={{textAlign:'right'}}>
           <BotaoEnviar
             onClick={enviarFormulario}
           >
             Enviar
           </BotaoEnviar>
-        </div>
+        </DivStyled>
 
       </DivFormulario>
     </DivContainer>

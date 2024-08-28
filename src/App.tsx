@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Rotas from './rotas/rotas'
 import Footer from './components/Footer/Footer'
+import Formulario from './components/Formulario'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
+      <Formulario/>
       <Rotas />
       <div>
         <a href="https://vitejs.dev" target="_blank">
