@@ -71,14 +71,24 @@ button:focus-visible {
 
 @font-face {
   font-family: 'TTSupermolot-Regular';
-  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Regular.ttf') format('truetype');
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Regular.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TTSupermolot-Bold';
-  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Bold.ttf') format('truetype');
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Bold.ttf')
+    format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTSupermolot-Black';
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Black.ttf')
+    format('truetype');
   font-weight: bold;
   font-style: normal;
 }
