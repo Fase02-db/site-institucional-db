@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import CardComponent from '../../components/Card'
 import { StringsApp } from '../../assets/strings/string-app'
 import styled from 'styled-components'
