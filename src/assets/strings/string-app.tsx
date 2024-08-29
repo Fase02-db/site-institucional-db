@@ -11,4 +11,14 @@ export const StringsApp = {
   tituloCardTresHome: 'A evolução da inteligência artificial',
   resumoCardHome:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam urna, euismod at porttitor in, dignissim eu mauris. In sem nibh, viverra eu risus sed,',
+  tituloCabecalhoCliente: 'NÓS FAZEMOS A DIFERENÇA',
+  subtituloCaseCliente: 'Case de sucesso',
+  subtituloAlgunsClientes: 'Conheça alguns clientes',
+  resumoClientes:
+    'Conheça alguns clientes que transformaram seus negócios com as soluções inovadoras da empresa ABC.',
+  tituloCardVajero: 'Case Varejo',
+  tituloCardPet: 'Case setor Pet',
+  tituloCardFinancas: 'Case Finanças',
+  resumoDepoimento:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dolor nulla. Phasellus egestas purus ut quam malesuada, eu tristique tortor posuere. Phasellus massa arcu, rhoncus vitae maximus  vitae, lacinia a dui.',
 }
