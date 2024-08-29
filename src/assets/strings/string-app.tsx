@@ -32,4 +32,13 @@ export const StringsApp = {
   tituloCardVeterinaria: 'Inteligência artificial na Veterinária',
   tituloCardTecnoPet: 'Integrando tecnologia e bem-estar pet',
   tituloServicosOferecidos: 'Serviços oferecidos',
+  tituloQuemSomos: 'SOMOS UMA EMPRESA DE TECNOLOGIA.',
+  resumoDepoimentoDois:
+    '"Contratar os serviços da empresa ABC foi uma das melhores decisões para nossa empresa. Eles implementaram soluções tecnológicas inovadoras que aumentaram nossa eficiência e produtividade. A equipe é extremamente profissional e dedicada, sempre pronta para resolver problemas e oferecer suporte. Recomendo a ABC para qualquer empresa que deseja crescer e se destacar no mercado."',
+  resumoSobreQuemSomosParagrafoUm:
+    'A empresa de tecnologia ABC é uma líder inovadora no desenvolvimento de soluções tecnológicas avançadas. Especializada em metodologias ágeis, a ABC oferece serviços que abrangem desde a criação de softwares personalizados até a implementação de sistemas de gestão empresarial. ',
+  resumoSobreQuemSomosParagrafoDois:
+    'Com um foco constante em eficiência, qualidade e satisfação do cliente, a ABC tem ajudado diversas empresas a melhorar sua produtividade e a alcançar seus objetivos estratégicos. Seu compromisso com a inovação e a excelência a torna uma parceira confiável para negócios de todos os setores.',
+  resumoCardQuemSomos:
+    'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.',
 }
