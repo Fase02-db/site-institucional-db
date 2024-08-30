@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
 import styled from 'styled-components';
 
-
 const DivContainer = styled.div`
   width: 977px;
   height: 516px;
@@ -123,7 +122,7 @@ const Formulario: React.FC = () => {
               style={{margin:'0px'}}
             >
               <DivInput>
-               
+
                 <Input style={{border:'none', boxShadow:'none'}}
                   placeholder='Nome'
                   aria-label='Digite-aqui-o-nome'
@@ -137,7 +136,7 @@ const Formulario: React.FC = () => {
               name="telefone"
             >
               <DivInput>
-                
+
                 <Input style={{border:'none', boxShadow:'none'}}
                   placeholder='Telefone'
                   aria-label='Digite-aqui-o-Telefone'
@@ -154,7 +153,7 @@ const Formulario: React.FC = () => {
               style={{margin:'0px'}}
             >
               <DivInput>
-                
+
                 <Input style={{border:'none', boxShadow:'none'}}
                   placeholder='E-mail'
                   aria-label='Digite-aqui-o-Email'
@@ -168,7 +167,7 @@ const Formulario: React.FC = () => {
               name="assunto"
             >
               <DivInput>
-                
+
                 <Input style={{border:'none', boxShadow:'none'}}
                   placeholder='Assunto'
                   aria-label='Digite-aqui-o-Assunto'
@@ -185,7 +184,7 @@ const Formulario: React.FC = () => {
           <Form.Item
             name="mensagem"
           >
-            <TextArea 
+            <TextArea
               placeholder='Mensagem'
               aria-label='Digite-aqui-a-mensagem'
               style={{border:'none', boxShadow:'none'}}
