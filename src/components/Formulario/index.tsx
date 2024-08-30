@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Input } from 'antd';
 import styled from 'styled-components';
-import { RotuloDeCampo } from '../RotuloDeCampo';
+
 
 const DivContainer = styled.div`
   width: 977px;
@@ -101,7 +101,8 @@ const Formulario: React.FC = () => {
   }
 
   const enviarFormulario = async (): Promise<void> => {
-    console.log('Entrou em enviar');
+    //verificar a igualdade de campos preenchidos e enviados.
+
   };
 
   return (
@@ -109,7 +110,7 @@ const Formulario: React.FC = () => {
     <DivContainer>
 
       <Titulo>Entre em contato</Titulo>
-      <SubTitulo>
+      <SubTitulo aria-label='Sub-titulo-da-pagina'>
         Envie um e-mail através do formulário abaixo ou fale com a nossa equipe através
          de um dos nossos canais de atendimento.
       </SubTitulo>
@@ -119,12 +120,13 @@ const Formulario: React.FC = () => {
           <DivStyled style={{display:'block', width:'328px'}}>
             <Form.Item
               name="nome"
-              rules={[{ required: true, message: 'Entre com seu nome.' }]}
               style={{margin:'0px'}}
             >
               <DivInput>
-                <RotuloDeCampo>Nome</RotuloDeCampo>
+               
                 <Input style={{border:'none', boxShadow:'none'}}
+                  placeholder='Nome'
+                  aria-label='Digite-aqui-o-nome'
                   value={nome}
                   onChange={handlerNome}
                 />
@@ -133,11 +135,12 @@ const Formulario: React.FC = () => {
 
             <Form.Item
               name="telefone"
-              rules={[{ required: true, message: 'Por favor, informe seu telefone!' }]}
             >
               <DivInput>
-                <RotuloDeCampo>Telefone</RotuloDeCampo>
+                
                 <Input style={{border:'none', boxShadow:'none'}}
+                  placeholder='Telefone'
+                  aria-label='Digite-aqui-o-Telefone'
                   value={telefone}
                   onChange={handlerTelefone}
                 />
@@ -148,12 +151,13 @@ const Formulario: React.FC = () => {
           <DivStyled style={{width:'637px'}}>
             <Form.Item
               name="email"
-              rules={[{ required: true, message: 'Por favor, informe seu email!' }]}
               style={{margin:'0px'}}
             >
               <DivInput>
-                <RotuloDeCampo>E-mail</RotuloDeCampo>
+                
                 <Input style={{border:'none', boxShadow:'none'}}
+                  placeholder='E-mail'
+                  aria-label='Digite-aqui-o-Email'
                   value={email}
                   onChange={handlerEmail}
                 />
@@ -162,11 +166,12 @@ const Formulario: React.FC = () => {
 
             <Form.Item
               name="assunto"
-              rules={[{ required: true, message: 'Por favor, informe o assunto!' }]}
             >
               <DivInput>
-                <RotuloDeCampo>Assunto</RotuloDeCampo>
+                
                 <Input style={{border:'none', boxShadow:'none'}}
+                  placeholder='Assunto'
+                  aria-label='Digite-aqui-o-Assunto'
                   value={assunto}
                   onChange={handlerAssunto}
                 />
@@ -179,12 +184,12 @@ const Formulario: React.FC = () => {
 
           <Form.Item
             name="mensagem"
-            rules={[{ required: true, message: 'Por favor, escreva sua mensagem!' }]}
           >
-            <RotuloDeCampo>Mensagem</RotuloDeCampo>
-            <TextArea
-              style={{border:'none'}}
-              rows={6}
+            <TextArea 
+              placeholder='Mensagem'
+              aria-label='Digite-aqui-a-mensagem'
+              style={{border:'none', boxShadow:'none'}}
+              rows={8}
               value={mensagem}
               onChange={handlerMensagem}
             />
@@ -192,6 +197,7 @@ const Formulario: React.FC = () => {
         </DivAreaDeTexto>
         <DivStyled style={{textAlign:'right'}}>
           <BotaoEnviar
+            aria-label='Clique-aqui-para-enviar-o-formulario'
             onClick={enviarFormulario}
           >
             Enviar
