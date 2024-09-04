@@ -31,7 +31,7 @@ const NavStyled = styled.nav`
     }
   }
 `
-const Header: React.FC = () => {
+const HeaderComponent: React.FC = () => {
   return (
     <NavStyled>
       <a href="/">
@@ -59,4 +59,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default HeaderComponent
