@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import CardComponent from '../../components/Card'
 import { StringsApp } from '../../assets/strings/string-app'
 import styled from 'styled-components'
+import Formulario from '../../components/Formulario'
 
 const HeaderStyled = styled.header`
   width: 100%;
@@ -92,6 +93,12 @@ const DivNoticia = styled.div`
   }
 `
 
+const SectionForm = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 120px;
+`
+
 const Home: React.FC = () => {
   return (
     <div>
@@ -138,6 +145,9 @@ const Home: React.FC = () => {
           href="/"
         />
       </SectionCards>
+      <SectionForm>
+        <Formulario />
+      </SectionForm>
     </div>
   )
 }
