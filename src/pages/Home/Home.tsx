@@ -41,8 +41,10 @@ const HeaderStyled = styled.header`
 `
 
 const SectionSobre = styled.section`
-  display: inline-flex;
-  padding: 70px 23%;
+  display: flex;
+  padding: 70px 0;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 const Image = styled.img`
@@ -51,6 +53,7 @@ const Image = styled.img`
 
 const DivStyled = styled.div`
   padding-left: 50px;
+  width: 25%;
 
   h4 {
     font-family: TTSupermolot-Bold;
