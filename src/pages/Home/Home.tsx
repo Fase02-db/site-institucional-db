@@ -42,7 +42,7 @@ const HeaderStyled = styled.header`
 
 const SectionSobre = styled.section`
   display: inline-flex;
-  padding: 70px 20%;
+  padding: 70px 23%;
 `
 
 const Image = styled.img`
@@ -50,7 +50,7 @@ const Image = styled.img`
 `
 
 const DivStyled = styled.div`
-  padding-left: 70px;
+  padding-left: 50px;
 
   h4 {
     font-family: TTSupermolot-Bold;
@@ -58,6 +58,7 @@ const DivStyled = styled.div`
     font-weight: 400;
     line-height: 44.46px;
     text-align: left;
+    margin: 0;
   }
 
   p,
@@ -77,9 +78,10 @@ const DivStyled = styled.div`
 const SectionCards = styled.section`
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
-  padding: 50px 0 70px 0;
+  padding: 50px 0 20px 0;
+  width: 100%;
 `
 const DivNoticia = styled.div`
   text-align: center;
@@ -87,6 +89,7 @@ const DivNoticia = styled.div`
   font-size: 36px;
   font-weight: 400;
   line-height: 44.46px;
+  width: 100%;
 
   h4 {
     margin: 0;
@@ -94,9 +97,13 @@ const DivNoticia = styled.div`
 `
 
 const SectionForm = styled.div`
-  display: flex;
-  justify-content: center;
   padding-bottom: 120px;
+`
+
+const ContainerStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 const Home: React.FC = () => {
@@ -108,46 +115,48 @@ const Home: React.FC = () => {
           Entre em contato <img src="/flecha.png"></img>
         </Link>
       </HeaderStyled>
-      <SectionSobre>
-        <Image src="../../../public/abclocal.svg" />
-        <DivStyled>
-          <h4>{StringsApp.tituloSobre}</h4>
-          <p>{StringsApp.resumoSobre}</p>
-          <Link to={'/'}>Link</Link>
-        </DivStyled>
-      </SectionSobre>
-      <DivNoticia>
-        <h4>{StringsApp.tituloNoticia}</h4>
-      </DivNoticia>
-      <SectionCards>
-        <CardComponent
-          img="/image1.png"
-          titulo={StringsApp.tituloCardUmHome}
-          categoria="Solidariedade"
-          resumo={StringsApp.resumoCardHome}
-          saibaMais="Saiba mais"
-          href="/"
-        />
-        <CardComponent
-          img="/image2.png"
-          titulo={StringsApp.tituloCardDoisHome}
-          categoria="Negócios"
-          resumo={StringsApp.resumoCardHome}
-          saibaMais="Saiba mais"
-          href="/"
-        />
-        <CardComponent
-          img="/image3.png"
-          titulo={StringsApp.tituloCardTresHome}
-          categoria="Mercado"
-          resumo={StringsApp.resumoCardHome}
-          saibaMais="Saiba mais"
-          href="/"
-        />
-      </SectionCards>
-      <SectionForm>
-        <Formulario />
-      </SectionForm>
+      <ContainerStyled>
+        <SectionSobre>
+          <Image src="../../../public/abclocal.svg" />
+          <DivStyled>
+            <h4>{StringsApp.tituloSobre}</h4>
+            <p>{StringsApp.resumoSobre}</p>
+            <Link to={'/'}>Link</Link>
+          </DivStyled>
+        </SectionSobre>
+        <DivNoticia>
+          <h4>{StringsApp.tituloNoticia}</h4>
+        </DivNoticia>
+        <SectionCards>
+          <CardComponent
+            img="/image1.png"
+            titulo={StringsApp.tituloCardUmHome}
+            categoria="Solidariedade"
+            resumo={StringsApp.resumoCardHome}
+            saibaMais="Saiba mais"
+            href="/"
+          />
+          <CardComponent
+            img="/image2.png"
+            titulo={StringsApp.tituloCardDoisHome}
+            categoria="Negócios"
+            resumo={StringsApp.resumoCardHome}
+            saibaMais="Saiba mais"
+            href="/"
+          />
+          <CardComponent
+            img="/image3.png"
+            titulo={StringsApp.tituloCardTresHome}
+            categoria="Mercado"
+            resumo={StringsApp.resumoCardHome}
+            saibaMais="Saiba mais"
+            href="/"
+          />
+        </SectionCards>
+        <SectionForm>
+          <Formulario />
+        </SectionForm>
+      </ContainerStyled>
     </div>
   )
 }

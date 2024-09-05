@@ -16,10 +16,10 @@ const Titulo = styled.h1`
 `
 const SubTitulo = styled.h2`
   width: 100%;
-  height: 83px;
   font-family: 'Roboto Flex', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  padding-bottom: 10px;
 `
 const DivFormulario = styled(Form)`
   width: 100%;
@@ -35,7 +35,7 @@ const DivCampos = styled.form`
 const DivAreaDeTexto = styled.div`
   width: 100%;
   height: 197px;
-  margin-top: 12px;
+  margin-top: 16px;
   border: 1px solid #292929;
 `
 const { TextArea } = Input
