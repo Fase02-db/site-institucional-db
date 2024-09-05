@@ -12,7 +12,6 @@ const ContainerDiv = styled.div`
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    border: solid 5px red;
 `
 const Imagem = styled.img`
     width: 100%;
