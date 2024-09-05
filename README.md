@@ -1,44 +1,42 @@
-# Fase 02-db / Site-Institucional-db
+# Site-Institucional-db
 
-## Funcionalidade
+## Descrição ⬇️
+Este site institucional é a vitrine digital de um projeto. Ele fornece informações essenciais sobre a sua história (Sobre nós), missão, visão, e os produtos ou serviços oferecidos. O site também inclui seções para notícias, blog e contato, áreas restritas para funcionários ou clientes. 
 
-- Página inicial com uma visão geral da empresa.
-- Seção sobre nós, destacando a equipe e a história da empresa.
-- Formulário de contato para clientes.
+## Para Ultilizar a Aplicação
+
+- Para a Ultilização do Projeto é essencial a instalação do [Node.js](https://nodejs.org/) sendo a versão 14 ou superior.
   
-## Uso
-
-- Back-end
-  - Java 17
-  - Spring Boot
-  - Lombok
-  - Maven
-  - FlyWay
-  - H2
-  - MySql
-  - Mockito MVC
-  - JUnit
-   
-- Front-End
-  - React
-  - TypeScript
-  - Axios
-  - Styled Components
-  - Jest
-   
-- Qualidade
-  - Selenium
-  - Cypress
-  - TestNG
+- Precisa tambem digitar o comando:
+  ```bash
+  npm run dev
   
-- Devops
-  - Git
-  - Git Hub
+- fazer uma instalação da dependências ultilizando:
+  
+  ```bash
+  npm install
 
+## Tecnologias Usadas
+
+- Node.js: Plataforma empregada para o desenvolvimento do back-end.
+- TypeScript: Linguagem empregada para garantir tipagem.
+- Styled Components: Linguagem empregada para estilizar.
+- TestNG, Selenium e WebDriverManager: Frameworks empregados para os testes.
+
+### Propósito
+
+Apenas o treinamento da equipe da [DBServer](https://db.tec.br/), e treinar o desenvolvimento em equipe com os processos de gitflow.
+ 
  ## Contribuição
 
- Se você deseja contribuir para melhorar o site, por favor, abra um pull request ou relate problemas na seção de issues. Agradecemos por sua ajuda!
+ ### Se você quiser contribuir com o projeto, siga os passos abaixo:
 
- ## Licença
-
- 
+- Crie uma nova branch com a sua feature ou correção de bug: git checkout -b minha-nova-feature.
+  
+- Faça commit das suas mudanças:
+  ```bash
+  git commit -m "Adiciona a nova feature"
+  
+- Faça push para a branch: 
+  ```bash
+  git push origin minha-nova-feature.
