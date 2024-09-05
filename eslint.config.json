@@ -1,5 +1,5 @@
 {
-  "ignorePatterns": ["node_modules/", "dist/", "env.d.ts"],
+  "ignorePatterns": ["node_modules/", "dist/", "env.d.ts", "setup-tests.js"],
   "overrides": [
     {
       "files": ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
