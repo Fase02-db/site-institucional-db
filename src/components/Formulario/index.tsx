@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import { Button, Form, Input } from 'antd';
-import styled from 'styled-components';
+import React, { useState } from 'react'
+import { Button, Form, Input } from 'antd'
+import styled from 'styled-components'
 
 const DivContainer = styled.div`
   width: 977px;
   height: 516px;
   margin: 0;
-  padding:0;
+  padding: 0;
   text-align: left;
- `
+`
 const Titulo = styled.h1`
   font-family: 'TTSupermolot-Bold', sans-serif;
-  font-weight: 700;  
-  font-size: 48px;  
+  font-weight: 700;
+  font-size: 48px;
 `
 const SubTitulo = styled.h2`
   width: 100%;
-  height: 83px;  
   font-family: 'Roboto Flex', sans-serif;
-  font-weight: 400;  
-  font-size: 16px; 
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 10px;
 `
 const DivFormulario = styled(Form)`
   width: 100%;
-  marging:0px;
+  marging: 0px;
   height: 392px;
 `
 const DivCampos = styled.form`
@@ -35,111 +35,102 @@ const DivCampos = styled.form`
 const DivAreaDeTexto = styled.div`
   width: 100%;
   height: 197px;
-  margin-top: 12px;
+  margin-top: 16px;
   border: 1px solid #292929;
 `
-const {TextArea} = Input;
+const { TextArea } = Input
 
 const BotaoEnviar = styled(Button)`
   width: 200px;
   height: 44px;
-  margin:5px;
+  margin: 5px;
   font-family: 'TTSupermolot-Bold', sans-serif;
-  font-weight: 400;  
+  font-weight: 400;
   font-size: 16px;
   line-height: 18.65px;
-  background-color:#414ABA;
+  background-color: #414aba;
   border-radius: 6px;
-  color: #fff; 
+  color: #fff;
 `
 const DivInput = styled.div`
-    width: 100%;
-    height: 56px;
-    margin: 0;
-    margin-bottom: 12px;
-    padding: 0;
-    text-align: center;
-    border: 1px solid #292929;
-    border-radius: 8px;
-    display:flex;
+  width: 100%;
+  height: 56px;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  display: flex;
 `
-const DivStyled = styled.div`
-   height: 100%;
-`
+const DivStyled = styled.div``
 const Formulario: React.FC = () => {
+  const [nome, setNome] = useState<string>('')
+  const [telefone, setTelefone] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [assunto, setAssunto] = useState<string>('')
+  const [mensagem, setMensagen] = useState<string>('')
 
-  const [nome, setNome] = useState<string>('');
-  const [telefone, setTelefone]= useState<string>('');
-  const [email, setEmail]= useState<string>('');
-  const [assunto, setAssunto]= useState<string>('');
-  const [mensagem, setMensagen]= useState<string>('');
-
-  const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>)=>{
-    const valor = nome.target.value;
-    setNome(valor);
+  const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = nome.target.value
+    setNome(valor)
   }
 
-  const handlerTelefone = (telefone: React.ChangeEvent<HTMLInputElement>)=>{
-    const valor = telefone.target.value;
-    setTelefone(valor);
+  const handlerTelefone = (telefone: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = telefone.target.value
+    setTelefone(valor)
   }
 
-  const handlerEmail = (email: React.ChangeEvent<HTMLInputElement>)=>{
-    const valor = email.target.value;
-    setEmail(valor);
+  const handlerEmail = (email: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = email.target.value
+    setEmail(valor)
   }
 
-  const handlerAssunto = (assunto: React.ChangeEvent<HTMLInputElement>)=>{
-    const valor = assunto.target.value;
-    setAssunto(valor);
+  const handlerAssunto = (assunto: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = assunto.target.value
+    setAssunto(valor)
   }
 
-  const handlerMensagem = (mensagem: React.ChangeEvent<HTMLTextAreaElement>)=>{
-    const valor = mensagem.target.value;
-    setMensagen(valor);
+  const handlerMensagem = (
+    mensagem: React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
+    const valor = mensagem.target.value
+    setMensagen(valor)
   }
 
   const enviarFormulario = async (): Promise<void> => {
     //verificar a igualdade de campos preenchidos e enviados.
-
-  };
+  }
 
   return (
-
     <DivContainer>
-
       <Titulo>Entre em contato</Titulo>
-      <SubTitulo aria-label='Sub-titulo-da-pagina'>
-        Envie um e-mail através do formulário abaixo ou fale com a nossa equipe através
-         de um dos nossos canais de atendimento.
+      <SubTitulo aria-label="Sub-titulo-da-pagina">
+        Envie um e-mail através do formulário abaixo ou fale com a nossa equipe
+        através de um dos nossos canais de atendimento.
       </SubTitulo>
 
       <DivFormulario>
         <DivCampos>
-          <DivStyled style={{display:'block', width:'328px'}}>
-            <Form.Item
-              name="nome"
-              style={{margin:'0px'}}
-            >
+          <DivStyled style={{ display: 'block', width: '328px' }}>
+            <Form.Item name="nome" style={{ margin: '0px' }}>
               <DivInput>
-
-                <Input style={{border:'none', boxShadow:'none'}}
-                  placeholder='Nome'
-                  aria-label='Digite-aqui-o-nome'
+                <Input
+                  style={{ border: 'none', boxShadow: 'none' }}
+                  placeholder="Nome"
+                  aria-label="Digite-aqui-o-nome"
                   value={nome}
                   onChange={handlerNome}
                 />
               </DivInput>
             </Form.Item>
 
-            <Form.Item
-              name="telefone"
-            >
+            <Form.Item name="telefone">
               <DivInput>
-
-                <Input style={{border:'none', boxShadow:'none'}}
-                  placeholder='Telefone'
-                  aria-label='Digite-aqui-o-Telefone'
+                <Input
+                  style={{ border: 'none', boxShadow: 'none' }}
+                  placeholder="Telefone"
+                  aria-label="Digite-aqui-o-Telefone"
                   value={telefone}
                   onChange={handlerTelefone}
                 />
@@ -147,30 +138,25 @@ const Formulario: React.FC = () => {
             </Form.Item>
           </DivStyled>
 
-          <DivStyled style={{width:'637px'}}>
-            <Form.Item
-              name="email"
-              style={{margin:'0px'}}
-            >
+          <DivStyled style={{ width: '637px' }}>
+            <Form.Item name="email" style={{ margin: '0px' }}>
               <DivInput>
-
-                <Input style={{border:'none', boxShadow:'none'}}
-                  placeholder='E-mail'
-                  aria-label='Digite-aqui-o-Email'
+                <Input
+                  style={{ border: 'none', boxShadow: 'none' }}
+                  placeholder="E-mail"
+                  aria-label="Digite-aqui-o-Email"
                   value={email}
                   onChange={handlerEmail}
                 />
               </DivInput>
             </Form.Item>
 
-            <Form.Item
-              name="assunto"
-            >
+            <Form.Item name="assunto">
               <DivInput>
-
-                <Input style={{border:'none', boxShadow:'none'}}
-                  placeholder='Assunto'
-                  aria-label='Digite-aqui-o-Assunto'
+                <Input
+                  style={{ border: 'none', boxShadow: 'none' }}
+                  placeholder="Assunto"
+                  aria-label="Digite-aqui-o-Assunto"
                   value={assunto}
                   onChange={handlerAssunto}
                 />
@@ -179,32 +165,28 @@ const Formulario: React.FC = () => {
           </DivStyled>
         </DivCampos>
 
-        <DivAreaDeTexto >
-
-          <Form.Item
-            name="mensagem"
-          >
+        <DivAreaDeTexto>
+          <Form.Item name="mensagem">
             <TextArea
-              placeholder='Mensagem'
-              aria-label='Digite-aqui-a-mensagem'
-              style={{border:'none', boxShadow:'none'}}
+              placeholder="Mensagem"
+              aria-label="Digite-aqui-a-mensagem"
+              style={{ border: 'none', boxShadow: 'none' }}
               rows={8}
               value={mensagem}
               onChange={handlerMensagem}
             />
           </Form.Item>
         </DivAreaDeTexto>
-        <DivStyled style={{textAlign:'right'}}>
+        <DivStyled style={{ textAlign: 'right' }}>
           <BotaoEnviar
-            aria-label='Clique-aqui-para-enviar-o-formulario'
+            aria-label="Clique-aqui-para-enviar-o-formulario"
             onClick={enviarFormulario}
           >
             Enviar
           </BotaoEnviar>
         </DivStyled>
-
       </DivFormulario>
     </DivContainer>
-  );
-};
-export default Formulario;
+  )
+}
+export default Formulario
