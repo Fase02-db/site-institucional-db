@@ -42,7 +42,7 @@ const HeaderStyled = styled.header`
 
 const SectionSobre = styled.section`
   display: flex;
-  padding: 70px 0;
+  padding: 70px 10%;
   flex-wrap: wrap;
   justify-content: center;
 `
