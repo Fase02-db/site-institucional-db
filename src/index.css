@@ -80,3 +80,11 @@ button:focus-visible {
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'TTSupermolot-Black';
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Black.ttf')
+    format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
