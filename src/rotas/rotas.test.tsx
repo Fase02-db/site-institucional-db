@@ -66,6 +66,6 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Cliente')).toBeInTheDocument()
+    expect(screen.getByText('NÓS FAZEMOS A DIFERENÇA')).toBeInTheDocument()
   })
 })
