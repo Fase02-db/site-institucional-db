@@ -3,7 +3,7 @@
 ## Descrição ⬇️
 Este site institucional é a vitrine digital de um projeto. Ele fornece informações essenciais sobre a sua história (Sobre nós), missão, visão, e os produtos ou serviços oferecidos. O site também inclui seções para notícias, blog e contato, áreas restritas para funcionários ou clientes. 
 
-## Para Ultilizar a Aplicação
+## Para ultilizar a Aplicação
 
 - Para a Ultilização do Projeto é essencial a instalação do [Node.js](https://nodejs.org/) sendo a versão 14 ou superior.
   
