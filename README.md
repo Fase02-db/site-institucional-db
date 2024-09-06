@@ -31,7 +31,9 @@ Apenas o treinamento da equipe da [DBServer](https://db.tec.br/), e treinar o de
 
  ### Se você quiser contribuir com o projeto, siga os passos abaixo:
 
-- Crie uma nova branch com a sua feature ou correção de bug: git checkout -b minha-nova-feature.
+- Crie uma nova branch com a sua feature ou correção de bug:
+  ```bash
+  git checkout -b minha-nova-feature.
   
 - Faça commit das suas mudanças:
   ```bash
