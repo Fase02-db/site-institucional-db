@@ -5,7 +5,7 @@ Este site institucional é a vitrine digital de um projeto. Ele fornece informa�
 
 ## Para ultilizar a Aplicação
 
-- Para a ultilização do Projeto é essencial a instalação do [Node.js](https://nodejs.org/) sendo a versão 14 ou superior.
+- Para a ultilização do projeto é essencial a instalação do [Node.js](https://nodejs.org/), sendo a versão 14 ou superior.
   
 - Precisa tambem digitar o comando:
   ```bash
