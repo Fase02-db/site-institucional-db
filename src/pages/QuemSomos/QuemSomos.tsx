@@ -69,12 +69,13 @@ const DivStyled = styled.div`
 
 const TituloHeader = styled.h1`
   font-family: 'TTSupermolot-Black';
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 400;
   line-height: 103.2px;
   text-align: center;
   color: #292929;
   margin: 0;
+  padding: 0 10%;
 `
 
 const SectionBeneficio = styled.div`
@@ -85,9 +86,7 @@ const QuemSomos: React.FC = () => {
   return (
     <>
       <ContentStyled>
-        <TituloHeader>
-          <h1>{StringsApp.tituloQuemSomos}</h1>
-        </TituloHeader>
+        <TituloHeader>{StringsApp.tituloQuemSomos}</TituloHeader>
 
         <SectionSobre>
           <Image src="/biblioteca.png" />
