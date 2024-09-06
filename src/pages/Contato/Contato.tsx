@@ -11,7 +11,6 @@ const ContainerDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 2px red;
 `
 const Imagem = styled.img`
     width: 100%;
@@ -48,7 +47,6 @@ const DadosEmpresa = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;  
-    border: solid 2px red;
 `
 const FotoEmpresaDiv = styled.div`
     width: 45%;
