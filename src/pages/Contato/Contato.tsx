@@ -114,35 +114,35 @@ const Contato: React.FC = () => {
         </FotoEmpresaDiv>
         <InformacoesEmpresaDiv>
           <EnderecoFilialDiv>
-              <TituloH1 aria-label='nome-do-Estado-que-localiza-a-empresa'>Rio Grande do Sul</TituloH1>
-              <H5 aria-label='endereço-da-empresa'>
-                  Av. Ipiranga, 6681 - TECNOPUC - Prédio 99A - 5º Andar |CEP 90619-900 | 
+            <TituloH1 aria-label='nome-do-Estado-que-localiza-a-empresa'>Rio Grande do Sul</TituloH1>
+            <H5 aria-label='endereço-da-empresa'>
+                  Av. Ipiranga, 6681 - TECNOPUC - Prédio 99A - 5º Andar |CEP 90619-900 |
                   Bairro Partenon | Porto Alegre | RS | Brasil |
-              </H5>
-              <TelefoneDiv>
-                  <div>
-                      <Imagem src='./src/assets/iconePhone.png' aria-label='icone-do-telefone'/>
-                  </div>
-                  <H5 aria-label='telefone-da-empresa'>
+            </H5>
+            <TelefoneDiv>
+              <div>
+                <Imagem src='./src/assets/iconePhone.png' aria-label='icone-do-telefone'/>
+              </div>
+              <H5 aria-label='telefone-da-empresa'>
                     Telefone: +55 (51) 3322-6828
-                  </H5>
-              </TelefoneDiv>
+              </H5>
+            </TelefoneDiv>
           </EnderecoFilialDiv>
 
           <EnderecoFilialDiv>
-          <TituloH1 aria-label='nome-do-Estado-que-localiza-a-empresa-filial'>São Paulo</TituloH1>
-              <H5 aria-label='enderço-da-empresa-filial'>
-              Av. das Nações Unidas 12901, Torre Norte, 12. Andar |WeWork/CENU | 04578-910 
+            <TituloH1 aria-label='nome-do-Estado-que-localiza-a-empresa-filial'>São Paulo</TituloH1>
+            <H5 aria-label='enderço-da-empresa-filial'>
+              Av. das Nações Unidas 12901, Torre Norte, 12. Andar |WeWork/CENU | 04578-910
               | Bairro Brooklin Paulista | São Paulo | SP | Brasil |
-              </H5>
-              <TelefoneDiv >
-                  <div>
-                      <Imagem src='./src/assets/iconePhone.png' aria-label='imagem-icone-telefone'/>
-                  </div>
-                  <H5 aria-label='telefone-da-empresa-filial'>
+            </H5>
+            <TelefoneDiv >
+              <div>
+                <Imagem src='./src/assets/iconePhone.png' aria-label='imagem-icone-telefone'/>
+              </div>
+              <H5 aria-label='telefone-da-empresa-filial'>
                     Telefone: +55 (11) 3064-0810
-                  </H5>
-              </TelefoneDiv>  
+              </H5>
+            </TelefoneDiv>
           </EnderecoFilialDiv>
 
         </InformacoesEmpresaDiv>

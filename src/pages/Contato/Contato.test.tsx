@@ -1,4 +1,4 @@
-import {fireEvent, logRoles, render, screen } from '@testing-library/react'
+import {render, screen } from '@testing-library/react'
 import Contato from './Contato';
 describe('Teste da pagina de contato', () => {
   it('Deve renderizar os componentes da pagina de contato', () => {
@@ -21,7 +21,7 @@ describe('Teste da pagina de contato', () => {
     const inputAssunto = screen.getByRole('textbox', {name: 'Digite-aqui-o-Assunto'});
     const inputMensagem = screen.getByRole('textbox', {name: 'Digite-aqui-a-mensagem'});
     const botaoEnviar = screen.getByRole('button', {name: 'Clique-aqui-para-enviar-o-formulario'});
-  
+
     expect(imagemTopoDaPagina).toBeVisible();
     expect(imagemDaFachadaDaEmpresa).toBeVisible();
     expect(iconeDoTelefone).toBeVisible();
@@ -32,7 +32,7 @@ describe('Teste da pagina de contato', () => {
     expect(nomeDoEstadoQueLocalizaAEmpresaFilial).toBeVisible();
     expect(enderçoDaEmpresaFilial).toBeVisible();
     expect(telefoneDaEmpresaFilial).toBeVisible();
-    expect(tituloEntreEmContato).toBeVisible();   
+    expect(tituloEntreEmContato).toBeVisible();
     expect(SubTituloDaPagina).toBeVisible();
     expect(inputNome).toBeVisible();
     expect(inputTelefone).toBeVisible();
