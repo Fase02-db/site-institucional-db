@@ -26,7 +26,7 @@ const DivFormulario = styled(Form)`
   marging: 0px;
   height: 392px;
 `
-const DivCampos = styled.form`
+const DivCampos = styled.div`
   width: 100%;
   height: 125px;
   gap: 12px;
