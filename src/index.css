@@ -5,6 +5,10 @@
   line-height: 1.5;
   font-weight: 400;
 
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -67,24 +71,14 @@ button:focus-visible {
 
 @font-face {
   font-family: 'TTSupermolot-Regular';
-  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Regular.ttf')
-    format('truetype');
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TTSupermolot-Bold';
-  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Bold.ttf')
-    format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TTSupermolot-Black';
-  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Black.ttf')
-    format('truetype');
+  src: url('/public/fonts/supermolot-ttf/TT-Supermolot-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }

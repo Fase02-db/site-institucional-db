@@ -46,9 +46,7 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(
-      screen.getByText('SOMOS UMA EMPRESA DE TECNOLOGIA.'),
-    ).toBeInTheDocument()
+    expect(screen.getByText('Quem somos?')).toBeInTheDocument()
   })
   test('deve renderizar a página Noticia para a rota "/noticias"', () => {
     render(
@@ -68,6 +66,6 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('NÓS FAZEMOS A DIFERENÇA')).toBeInTheDocument()
+    expect(screen.getByText('Cliente')).toBeInTheDocument()
   })
 })
