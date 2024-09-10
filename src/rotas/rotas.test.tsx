@@ -36,7 +36,7 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Cases')).toBeInTheDocument()
+    expect(screen.getByText('Case Petlove')).toBeInTheDocument()
   })
   test('deve renderizar a página Quem Somos para a rota "/quem-somos"', () => {
     render(
