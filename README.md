@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Site-Institucional-db
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição ⬇️
+Este site institucional é a vitrine digital de um projeto. Ele fornece informações essenciais sobre a sua história (Sobre nós), missão, visão, e os produtos ou serviços oferecidos. O site também inclui seções para notícias, blog e contato, áreas restritas para funcionários ou clientes. 
 
-Currently, two official plugins are available:
+## Para Ultilizar a Aplicação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Para a Ultilização do Projeto é essencial a instalação do [Node.js](https://nodejs.org/) sendo a versão 14 ou superior.
+  
+- Precisa tambem digitar o comando:
+  ```bash
+  npm run dev
+  
+- fazer uma instalação da dependências ultilizando:
+  
+  ```bash
+  npm install
 
-## Expanding the ESLint configuration
+## Tecnologias Usadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js: Plataforma empregada para o desenvolvimento do back-end.
+- TypeScript: Linguagem empregada para garantir tipagem.
+- Styled Components: Linguagem empregada para estilizar.
+- TestNG, Selenium e WebDriverManager: Frameworks empregados para os testes.
 
-- Configure the top-level `parserOptions` property like this:
+### Propósito
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Apenas o treinamento da equipe da [DBServer](https://db.tec.br/), e treinar o desenvolvimento em equipe com os processos de gitflow.
+ 
+ ## Contribuição
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+ ### Se você quiser contribuir com o projeto, siga os passos abaixo:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Crie uma nova branch com a sua feature ou correção de bug: git checkout -b minha-nova-feature.
+  
+- Faça commit das suas mudanças:
+  ```bash
+  git commit -m "Adiciona a nova feature"
+  
+- Faça push para a branch: 
+  ```bash
+  git push origin minha-nova-feature.
