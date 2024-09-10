@@ -46,7 +46,7 @@ const HeaderComponent: React.FC = () => {
           <a href="/quem-somos">Quem somos</a>
         </li>
         <li className="fundo-texto">
-          <a href="#o-que-fazemos">O que fazemos</a>
+          <a href="/cases">O que fazemos</a>
         </li>
         <li className="fundo-texto">
           <a href="/clientes">Clientes</a>
