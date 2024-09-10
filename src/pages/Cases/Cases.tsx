@@ -58,6 +58,8 @@ const DivStyled = styled.div`
   }
 
   p {
+    font-family: Roboto Flex !important;
+    line-height: 21.09px;
     margin: 0;
     padding-bottom: 40px;
   }
