@@ -26,7 +26,7 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Contato')).toBeInTheDocument()
+    expect(screen.getByText('Nossos endereços')).toBeInTheDocument()
   })
   test('deve renderizar a página Cases para a rota "/cases"', () => {
     render(
