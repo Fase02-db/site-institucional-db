@@ -105,21 +105,21 @@ const Noticia: React.FC = () => {
             <br />
             <br />
             O CEO da ABC, João Silva, destacou a importância da colaboração para
-            o futuro do setor pet. "Estamos entusiasmados com essa parceria. A
+            o futuro do setor pet. Estamos entusiasmados com essa parceria. A
             infraestrutura robusta da Gigante do Varejo, combinada com nossas
             inovações tecnológicas, nos permitirá transformar a forma como
-            produtos e serviços para pets são oferecidos e consumidos no
-            Brasil", afirmou Silva.
+            produtos e serviços para pets são oferecidos e consumidos no Brasil,
+            afirmou Silva.
             <br />
             <br />
             A Gigante do Varejo, conhecida por sua vasta rede de lojas físicas e
             forte presença no e-commerce, vê a parceria como uma oportunidade de
-            impulsionar a inovação em suas operações. "O mercado pet está
+            impulsionar a inovação em suas operações. O mercado pet está
             crescendo rapidamente e a demanda por soluções tecnológicas que
             melhorem a vida dos animais de estimação e de seus donos é
             crescente. Com a expertise da ABC, poderemos oferecer uma
-            experiência de compra única e personalizada", declarou Maria
-            Andrade, diretora de operações da Gigante do Varejo.
+            experiência de compra única e personalizada, declarou Maria Andrade,
+            diretora de operações da Gigante do Varejo.
             <br />
             <br />
             A colaboração prevê a introdução de uma série de inovações,
@@ -133,9 +133,9 @@ const Noticia: React.FC = () => {
             <br />
             Especialistas do setor veem a parceria como um movimento estratégico
             para capitalizar sobre a tendência crescente de digitalização no
-            mercado pet. "Essa aliança tem o potencial de redefinir o mercado,
+            mercado pet. Essa aliança tem o potencial de redefinir o mercado,
             trazendo benefícios significativos tanto para os consumidores quanto
-            para o setor como um todo", comentou Carlos Lima, analista de
+            para o setor como um todo, comentou Carlos Lima, analista de
             mercado.
             <br />
             <br />
