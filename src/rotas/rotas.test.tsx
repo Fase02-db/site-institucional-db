@@ -26,7 +26,7 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Contato')).toBeInTheDocument()
+    expect(screen.getByText('Nossos endereços')).toBeInTheDocument()
   })
   test('deve renderizar a página Cases para a rota "/cases"', () => {
     render(
@@ -36,7 +36,7 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Cases')).toBeInTheDocument()
+    expect(screen.getByText('Case Petlove')).toBeInTheDocument()
   })
   test('deve renderizar a página Quem Somos para a rota "/quem-somos"', () => {
     render(
@@ -46,7 +46,9 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Quem somos?')).toBeInTheDocument()
+    expect(
+      screen.getByText('SOMOS UMA EMPRESA DE TECNOLOGIA.'),
+    ).toBeInTheDocument()
   })
   test('deve renderizar a página Noticia para a rota "/noticias"', () => {
     render(
@@ -66,6 +68,6 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Cliente')).toBeInTheDocument()
+    expect(screen.getByText('NÓS FAZEMOS A DIFERENÇA')).toBeInTheDocument()
   })
 })
