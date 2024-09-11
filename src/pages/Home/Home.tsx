@@ -120,7 +120,7 @@ const Home: React.FC = () => {
       </HeaderStyled>
       <ContainerStyled>
         <SectionSobre>
-          <Image src="../../../public/abclocal.svg" />
+          <Image src="/abclocal.svg" />
           <DivStyled>
             <h4>{StringsApp.tituloSobre}</h4>
             <p>{StringsApp.resumoSobre}</p>

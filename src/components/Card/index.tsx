@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, Typography, Button } from 'antd'
+import { Card, Typography } from 'antd'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const { Text } = Typography
 
@@ -36,7 +37,7 @@ const Resumo = styled(Text)`
   text-align: left;
   color: #292929;
 `
-const Botao = styled(Button)`
+const Botao = styled(Link)`
   width: 250px;
   height: 44px;
   padding: 8px 16px;
@@ -62,7 +63,7 @@ interface CardProps {
   categoria?: string
   resumo?: string
   saibaMais?: string
-  href?: string
+  href: string
 }
 
 const CardComponent: React.FC<CardProps> = ({
@@ -86,7 +87,7 @@ const CardComponent: React.FC<CardProps> = ({
       <Resumo>{resumo}</Resumo>
     </div>
     <div style={{ marginTop: 8 }}>
-      <Botao type="primary" onClick={() => window.open(href, '_blank')}>
+      <Botao to={href}>
         <ButtonText>{saibaMais}</ButtonText>
       </Botao>
     </div>
