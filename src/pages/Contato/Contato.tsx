@@ -122,10 +122,7 @@ const Contato: React.FC = () => {
             </H5>
             <TelefoneDiv>
               <div>
-                <Imagem
-                  src="./src/assets/iconePhone.png"
-                  aria-label="icone-do-telefone"
-                />
+                <Imagem src="/iconePhone.png" aria-label="icone-do-telefone" />
               </div>
               <H5 aria-label="telefone-da-empresa">
                 Telefone: +55 (51) 3322-6828
@@ -144,7 +141,7 @@ const Contato: React.FC = () => {
             <TelefoneDiv>
               <div>
                 <Imagem
-                  src="./src/assets/iconePhone.png"
+                  src="iconePhone.png"
                   aria-label="imagem-icone-telefone"
                 />
               </div>
