@@ -1,4 +1,4 @@
-package br.com.db.testcases;
+package br.com.db.testcases.funcionais;
 
 import br.com.db.steps.EntreEmContatoStep;
 import br.com.db.utils.BaseTest;
@@ -15,7 +15,7 @@ public class InstitucionalTestCase extends BaseTest {
     @Test(
             description = "Preencho os campos na seção 'entre em contato' da pagina inicial.",
             groups = {"web"},
-            priority = 1
+            priority = 2
     )
     public void paginaInicialTest() {
         EntreEmContatoStep entreEmContatoStep = new EntreEmContatoStep(driver());

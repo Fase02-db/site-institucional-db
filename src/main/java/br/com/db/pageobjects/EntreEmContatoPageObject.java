@@ -31,4 +31,8 @@ public class EntreEmContatoPageObject {
     public WebElement mensagemEntreEmContatoTextField() {
         return wait.toBeClickable(By.xpath("*//div[@id='root'] //textarea[@placeholder='Mensagem']"));
     }
+
+    public WebElement enivarButton() {
+        return wait.toBeClickable(By.xpath("*//div[@id='root'] //button[@type='button']"));
+    }
 }
