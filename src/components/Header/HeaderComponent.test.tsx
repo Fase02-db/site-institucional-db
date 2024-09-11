@@ -1,10 +1,14 @@
 import { render, screen } from '@testing-library/react'
-import React from 'react'
 import HeaderComponent from './HeaderComponent'
+import { MemoryRouter } from 'react-router-dom'
 
 describe('Teste do Header', () => {
   test('Deve renderizar o componente do header', () => {
-    render(<HeaderComponent />)
+    render(
+      <MemoryRouter>
+        <HeaderComponent />
+      </MemoryRouter>,
+    )
     expect(screen.getByText('Quem somos')).toBeInTheDocument()
     expect(screen.getByText('O que fazemos')).toBeInTheDocument()
     expect(screen.getByText('Clientes')).toBeInTheDocument()
