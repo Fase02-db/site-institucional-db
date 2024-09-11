@@ -99,10 +99,7 @@ const Contato: React.FC = () => {
   return (
     <ContainerDiv id="principal">
       <HeaderImgDiv>
-        <Imagem
-          src="./src/assets/topContato.png"
-          aria-label="imagem-topo-pagina"
-        />
+        <Imagem src="/topContato.png" aria-label="imagem-topo-pagina" />
       </HeaderImgDiv>
       <TituloDiv>
         <TituloH1 aria-label="titulo-nosso-endereço">Nossos endereços</TituloH1>
@@ -110,7 +107,7 @@ const Contato: React.FC = () => {
       <DadosEmpresa>
         <FotoEmpresaDiv>
           <Imagem
-            src="./src/assets/empresaRS.png"
+            src="/empresaRS.png"
             aria-label="imagem-da-fachada-da-empresa"
           />
         </FotoEmpresaDiv>
