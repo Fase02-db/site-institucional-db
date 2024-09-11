@@ -8,7 +8,7 @@ import Formulario from '../../components/Formulario'
 const HeaderStyled = styled.header`
   width: 100%;
   height: 100%;
-  background-image: url('../../../public/fundoheader.png');
+  background-image: url('/fundoheader.png');
   font-size: 80px;
   font-weight: 400;
   line-height: 98.4px;
