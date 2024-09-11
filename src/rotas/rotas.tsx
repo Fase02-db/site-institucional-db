@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home/Home';
-import Cases from '../pages/Cases/Cases';
-import Contato from '../pages/Contato/Contato';
-import Noticia from '../pages/Noticia/Noticia';
-import Cliente from '../pages/Cliente/Cliente';
-import QuemSomos from '../pages/QuemSomos/QuemSomos';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from '../pages/Home/Home'
+import Cases from '../pages/Cases/Cases'
+import Contato from '../pages/Contato/Contato'
+import Noticia from '../pages/Noticia/Noticia'
+import Cliente from '../pages/Cliente/Cliente'
+import QuemSomos from '../pages/QuemSomos/QuemSomos'
 
 const Rotas: React.FC = () => (
   <BrowserRouter>
@@ -14,9 +14,9 @@ const Rotas: React.FC = () => (
       <Route path="/clientes" element={<Cliente />} />
       <Route path="/cases" element={<Cases />} />
       <Route path="/contato" element={<Contato />} />
-      <Route path="/noticias" element={<Noticia />} />
+      <Route path="/noticia" element={<Noticia />} />
     </Routes>
   </BrowserRouter>
-);
+)
 
 export default Rotas
