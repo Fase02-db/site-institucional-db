@@ -58,7 +58,11 @@ describe('Teste Rotas', () => {
         </Routes>
       </MemoryRouter>,
     )
-    expect(screen.getByText('Noticia')).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'ABC fecha parceria com gigante do varejo para expandir tecnologia no setor pet',
+      ),
+    ).toBeInTheDocument()
   })
   test('deve renderizar a página Clientes para a rota "/clientes"', () => {
     render(

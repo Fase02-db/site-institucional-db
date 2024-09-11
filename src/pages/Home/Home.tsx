@@ -145,7 +145,7 @@ const Home: React.FC = () => {
             categoria="Negócios"
             resumo={StringsApp.resumoCardHome}
             saibaMais="Saiba mais"
-            href="/"
+            href="/noticia"
           />
           <CardComponent
             img="/image3.png"
