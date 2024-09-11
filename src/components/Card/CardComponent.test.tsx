@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import CardComponent from '.' // ajuste o caminho conforme necessário
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
 
 const mockProps = {
   img: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
@@ -7,12 +8,16 @@ const mockProps = {
   categoria: 'Categoria Exemplo',
   resumo: 'Este é um resumo de exemplo para o card.',
   saibaMais: 'Saiba Mais',
-  href: 'https://www.exemplo.com',
+  href: '/exemplo',
 }
 
 describe('Card Component', () => {
   test('Renderizando CardComponent com os props', () => {
-    render(<CardComponent {...mockProps} />)
+    render(
+      <MemoryRouter>
+        <CardComponent {...mockProps} />
+      </MemoryRouter>,
+    )
 
     expect(screen.getByText('Título do Card')).toBeInTheDocument()
 
@@ -27,14 +32,22 @@ describe('Card Component', () => {
   })
 
   test('Verificando comportandomento do botão CardComponent com os props', () => {
-    render(<CardComponent {...mockProps} />)
-    const openSpy = jest.spyOn(window, 'open').mockImplementation(() => null)
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path="/" element={<CardComponent {...mockProps} />} />
+          <Route
+            path="/exemplo"
+            element={<div>Você está na página certa</div>}
+          />
+        </Routes>
+      </MemoryRouter>,
+    )
 
-    const button = screen.getByText('Saiba Mais')
+    const link = screen.getByText('Saiba Mais')
+    expect(link).toBeInTheDocument()
 
-    fireEvent.click(button)
-    expect(openSpy).toHaveBeenCalledWith('https://www.exemplo.com', '_blank')
-
-    openSpy.mockRestore()
+    fireEvent.click(link)
+    expect(screen.getByText('Você está na página certa')).toBeInTheDocument()
   })
 })
