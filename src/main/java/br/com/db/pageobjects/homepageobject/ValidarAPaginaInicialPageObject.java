@@ -1,14 +1,14 @@
-package br.com.db.pageobjects.home;
+package br.com.db.pageobjects.homepageobject;
 
 import br.com.db.utils.WaitElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ValidarAPaginaPageObject {
+public class ValidarAPaginaInicialPageObject {
     private final WaitElement waitElement;
 
-    public ValidarAPaginaPageObject(WebDriver driver) {
+    public ValidarAPaginaInicialPageObject(WebDriver driver) {
         waitElement = new WaitElement(driver);
     }
 
