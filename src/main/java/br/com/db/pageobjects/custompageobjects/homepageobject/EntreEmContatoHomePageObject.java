@@ -1,14 +1,14 @@
-package br.com.db.pageobjects.homepageobject;
+package br.com.db.pageobjects.custompageobjects.homepageobject;
 
 import br.com.db.utils.WaitElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class EntreEmContatoPageObject {
+public class EntreEmContatoHomePageObject {
     private final WaitElement wait;
 
-    public EntreEmContatoPageObject(WebDriver driver) {
+    public EntreEmContatoHomePageObject(WebDriver driver) {
         wait = new WaitElement(driver);
     }
 

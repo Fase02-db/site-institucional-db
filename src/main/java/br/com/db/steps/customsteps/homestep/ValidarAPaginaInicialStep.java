@@ -1,6 +1,6 @@
-package br.com.db.steps.homestep;
+package br.com.db.steps.customsteps.homestep;
 
-import br.com.db.pageobjects.homepageobject.ValidarAPaginaInicialPageObject;
+import br.com.db.pageobjects.custompageobjects.homepageobject.ValidarAPaginaInicialPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 

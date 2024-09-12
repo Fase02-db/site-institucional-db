@@ -1,6 +1,6 @@
-package br.com.db.steps.oquefazemosstep;
+package br.com.db.steps.customsteps.oquefazemosstep;
 
-import br.com.db.pageobjects.oquefazemospageobject.ValidarAPaginaOQueFazemosPageObject;
+import br.com.db.pageobjects.custompageobjects.oquefazemospageobject.ValidarAPaginaOQueFazemosPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 

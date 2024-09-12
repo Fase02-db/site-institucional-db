@@ -1,10 +1,11 @@
 package br.com.db.testcases.funcionais;
 
-import br.com.db.steps.clientesstep.ValidarAPaginaClientesStep;
-import br.com.db.steps.oquefazemosstep.ValidarAPaginaOQueFazemosStep;
-import br.com.db.steps.quemsomosstep.ValidarAPaginaQuemSomosStep;
+import br.com.db.steps.customsteps.clientesstep.ValidarAPaginaClientesStep;
+import br.com.db.steps.customsteps.contatostep.ValidarAPaginaContatoStep;
+import br.com.db.steps.customsteps.oquefazemosstep.ValidarAPaginaOQueFazemosStep;
+import br.com.db.steps.customsteps.quemsomosstep.ValidarAPaginaQuemSomosStep;
 import br.com.db.utils.BaseTest;
-import br.com.db.steps.homestep.ValidarAPaginaInicialStep;
+import br.com.db.steps.customsteps.homestep.ValidarAPaginaInicialStep;
 import br.com.db.webdrivers.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -56,5 +57,16 @@ public class ValidarAsPaginasTestCase extends BaseTest {
         ValidarAPaginaClientesStep clientesStep = new ValidarAPaginaClientesStep(driver());
         clientesStep.validaOUrlDaPaginaClientes();
         clientesStep.validarOTituloEOsSubtitulosNaPagina();
+    }
+
+    @Test(
+            description = "Validar a URL, o titulo e os subtitles na pagina Contato.",
+            groups = {"web", "contato"},
+            priority = 5
+    )
+    public void paginaContatoTest() {
+        ValidarAPaginaContatoStep contatoStep = new ValidarAPaginaContatoStep(driver());
+        contatoStep.validarOUrlDaPaginaContato();
+        contatoStep.validarOTituloEOsSubtitulosNaPagina();
     }
 }

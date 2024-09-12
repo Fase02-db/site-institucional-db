@@ -1,4 +1,4 @@
-package br.com.db.pageobjects.homepageobject;
+package br.com.db.pageobjects.custompageobjects.homepageobject;
 
 import br.com.db.utils.WaitElement;
 import org.openqa.selenium.By;

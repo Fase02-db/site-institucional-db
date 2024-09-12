@@ -1,4 +1,4 @@
-package br.com.db.pageobjects.oquefazemospageobject;
+package br.com.db.pageobjects.custompageobjects.oquefazemospageobject;
 
 import br.com.db.utils.WaitElement;
 import org.openqa.selenium.By;

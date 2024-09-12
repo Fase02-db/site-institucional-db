@@ -1,6 +1,6 @@
-package br.com.db.steps.clientesstep;
+package br.com.db.steps.customsteps.clientesstep;
 
-import br.com.db.pageobjects.clientespageobject.ValidarAPaginaClientesPageObject;
+import br.com.db.pageobjects.custompageobjects.clientespageobject.ValidarAPaginaClientesPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 

@@ -4,6 +4,7 @@
         <classes>
             <class name="br.com.db.testcases.funcionais.EntreEmContatoPageHomeTestCase"/>
             <class name="br.com.db.testcases.funcionais.ValidarAsPaginasTestCase"/>
+            <class name="br.com.db.testcases.funcionais.EntreEmContatoPageContatoTest"/>
         </classes>
     </test>
 </suite>
