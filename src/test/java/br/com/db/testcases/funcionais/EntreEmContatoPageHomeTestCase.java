@@ -6,7 +6,7 @@ import br.com.db.webdrivers.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class InstitucionalTestCase extends BaseTest {
+public class EntreEmContatoPageHomeTestCase extends BaseTest {
 
     private WebDriver driver() {
         return DriverManager.getDriver();

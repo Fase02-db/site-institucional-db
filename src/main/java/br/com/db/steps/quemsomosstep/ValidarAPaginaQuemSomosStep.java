@@ -13,7 +13,7 @@ public class ValidarAPaginaQuemSomosStep {
         validarAPaginaQuemSomosPageObject = new ValidarAPaginaQuemSomosPageObject(_driver);
     }
 
-    public void validaOUrlDaPagina() {
+    public void validaOUrlDaPaginaQuemSomos() {
         acessaNaPaginaQuemSomos();
         Assert.assertEquals("https://site-institucional-db-fork.vercel.app/quem-somos", driver.getCurrentUrl());
     }

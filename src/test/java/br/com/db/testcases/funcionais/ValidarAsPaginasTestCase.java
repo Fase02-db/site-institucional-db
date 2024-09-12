@@ -1,5 +1,6 @@
 package br.com.db.testcases.funcionais;
 
+import br.com.db.steps.oquefazemosstep.ValidarAPaginaOQueFazemosStep;
 import br.com.db.steps.quemsomosstep.ValidarAPaginaQuemSomosStep;
 import br.com.db.utils.BaseTest;
 import br.com.db.steps.homestep.ValidarAPaginaInicialStep;
@@ -14,7 +15,8 @@ public class ValidarAsPaginasTestCase extends BaseTest {
 
     @Test(
             description = "Validar a URL, o titulo e os subtitles na pagina inicial.",
-            groups = {"web", "home"}
+            groups = {"web", "home"},
+            priority = 1
     )
     public void PaginaInicialTest() {
         ValidarAPaginaInicialStep paginaInicialStep = new ValidarAPaginaInicialStep(driver());
@@ -24,11 +26,23 @@ public class ValidarAsPaginasTestCase extends BaseTest {
 
     @Test(
             description = "Validar a URL, o titulo e os subtitles na pagina Quem somos.",
-            groups = {"web", "quemsomos"}
+            groups = {"web", "quemsomos"},
+            priority = 2
     )
     public void paginaQuemSomosTest() {
         ValidarAPaginaQuemSomosStep quemSomosStep = new ValidarAPaginaQuemSomosStep(driver());
-        quemSomosStep.validaOUrlDaPagina();
+        quemSomosStep.validaOUrlDaPaginaQuemSomos();
         quemSomosStep.validarOTituloEOsSubtitulosNaPagina();
+    }
+
+    @Test(
+            description = "Validar a URL, o titulo e os subtitles na pagina O que fazemos.",
+            groups = {"web", "oquefazemos"},
+            priority = 3
+    )
+    public void paginaOQueFazemosTest() {
+        ValidarAPaginaOQueFazemosStep oQueFazemosStep = new ValidarAPaginaOQueFazemosStep(driver());
+        oQueFazemosStep.validaOUrlDaPaginaOQueFazemos();
+        oQueFazemosStep.validarOTituloEOsSubtitulosNaPagina();
     }
 }
