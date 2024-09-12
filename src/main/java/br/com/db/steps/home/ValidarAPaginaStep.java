@@ -16,6 +16,9 @@ public class ValidarAPaginaStep {
     public void validarAPaginaInicial() {
         Assert.assertEquals("https://site-institucional-db-fork.vercel.app/", driver.getCurrentUrl());
         Assert.assertEquals("ABC Technology", driver.getTitle());
+    }
+
+    public void validarOTituloEOsSubtitulosNaPagina() {
         validarElementDoTitulo();
         validarOSubtituloDeSobreAABC();
         validarOSubtituloDeNoticiasDaMidia();
