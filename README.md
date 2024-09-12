@@ -8,7 +8,7 @@
   
 ---  
 
-:clipboard: -
+:clipboard: - [ABC Tecnhology](https://site-institucional-db-fork.vercel.app/)
   
 ---  
 
@@ -65,7 +65,7 @@ Após a execução do projeto, para visualizar o relatório:
 Abra a pasta de report e selecione o arquivo report.html. Clique com o botão direito do mouse, vá em "Open in", depois "Browser" e escolha o navegador da sua preferência.
 
 #### Screenshot:
-em construção...
+![](src/main/resources/img/screenshot_report.png)
 
 ---
 :robot::coffee:
