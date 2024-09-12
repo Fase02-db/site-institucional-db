@@ -55,5 +55,6 @@ public class ValidarAsPaginasTestCase extends BaseTest {
     public void paginaClientesTest() {
         ValidarAPaginaClientesStep clientesStep = new ValidarAPaginaClientesStep(driver());
         clientesStep.validaOUrlDaPaginaClientes();
+        clientesStep.validarOTituloEOsSubtitulosNaPagina();
     }
 }
