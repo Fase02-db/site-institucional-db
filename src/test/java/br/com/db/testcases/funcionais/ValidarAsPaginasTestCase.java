@@ -1,5 +1,6 @@
 package br.com.db.testcases.funcionais;
 
+import br.com.db.steps.clientesstep.ValidarAPaginaClientesStep;
 import br.com.db.steps.oquefazemosstep.ValidarAPaginaOQueFazemosStep;
 import br.com.db.steps.quemsomosstep.ValidarAPaginaQuemSomosStep;
 import br.com.db.utils.BaseTest;
@@ -44,5 +45,15 @@ public class ValidarAsPaginasTestCase extends BaseTest {
         ValidarAPaginaOQueFazemosStep oQueFazemosStep = new ValidarAPaginaOQueFazemosStep(driver());
         oQueFazemosStep.validaOUrlDaPaginaOQueFazemos();
         oQueFazemosStep.validarOTituloEOsSubtitulosNaPagina();
+    }
+
+    @Test(
+            description = "Validar a URL, o titulo e os subtitles na pagina Clientes.",
+            groups = {"web", "clientes"},
+            priority = 4
+    )
+    public void paginaClientesTest() {
+        ValidarAPaginaClientesStep clientesStep = new ValidarAPaginaClientesStep(driver());
+        clientesStep.validaOUrlDaPaginaClientes();
     }
 }
