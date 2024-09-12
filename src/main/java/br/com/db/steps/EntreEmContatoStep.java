@@ -33,8 +33,8 @@ public class EntreEmContatoStep {
         if (!entreEmContatoPageObject.enivarButton().isSelected()) {
             entreEmContatoPageObject.enivarButton().click();
             Report.log(Status.PASS, "O botão recebeu um clique");
-        } else {
-            Report.logCapture(Status.FAIL, "O botão não recebeu um clique.");
+            return;
         }
+        Report.logCapture(Status.FAIL, "O botao não recebeu um clique");
     }
 }
