@@ -12,13 +12,13 @@ public class ValidarAsPaginasTestCase extends BaseTest {
     }
 
     @Test(
-            description = "Validar o URL e da pagina inicial. ",
-            groups = {"web"},
+            description = "Validar a URL, o titulo e os subtitles na pagina inicial.",
+            groups = {"web", "home"},
             priority = 1
     )
-    public void validarAsPaginasTest() {
+    public void ABCTechnologyHomeTest() {
         ValidarAPaginaStep validarAPaginaStep = new ValidarAPaginaStep(driver());
-        validarAPaginaStep.validarAPaginaInicial();
+        validarAPaginaStep.validarAUrlDaPaginaInicial();
         validarAPaginaStep.validarOTituloEOsSubtitulosNaPagina();
     }
 }

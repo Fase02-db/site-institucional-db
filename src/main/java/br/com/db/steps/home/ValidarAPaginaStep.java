@@ -13,16 +13,20 @@ public class ValidarAPaginaStep {
         validarAPaginaPageObject = new ValidarAPaginaPageObject(_driver);
     }
 
-    public void validarAPaginaInicial() {
+    public void validarAUrlDaPaginaInicial() {
         Assert.assertEquals("https://site-institucional-db-fork.vercel.app/", driver.getCurrentUrl());
-        Assert.assertEquals("ABC Technology", driver.getTitle());
     }
 
     public void validarOTituloEOsSubtitulosNaPagina() {
+        validarOtituloDaPaginaInicial();
         validarElementDoTitulo();
         validarOSubtituloDeSobreAABC();
         validarOSubtituloDeNoticiasDaMidia();
         validarOSubtituloDeEntreEmContato();
+    }
+
+    private void validarOtituloDaPaginaInicial() {
+        Assert.assertEquals("ABC Technology", driver.getTitle());
     }
 
     private void validarElementDoTitulo() {
