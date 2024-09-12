@@ -1,6 +1,6 @@
-package br.com.db.steps;
+package br.com.db.steps.home;
 
-import br.com.db.pageobjects.EntreEmContatoPageObject;
+import br.com.db.pageobjects.home.EntreEmContatoPageObject;
 import br.com.db.utils.Report;
 import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
