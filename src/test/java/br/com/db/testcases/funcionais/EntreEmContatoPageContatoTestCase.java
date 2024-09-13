@@ -1,11 +1,11 @@
 package br.com.db.testcases.funcionais;
 
-import br.com.db.steps.customsteps.contatostep.EntreEmContatoStep;
+import br.com.db.steps.EntreEmContatoStep;
 import br.com.db.webdrivers.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class EntreEmContatoPageContatoTest {
+public class EntreEmContatoPageContatoTestCase {
     private WebDriver driver() {
         return DriverManager.getDriver();
     }

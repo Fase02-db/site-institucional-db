@@ -1,11 +1,11 @@
 package br.com.db.testcases.funcionais;
 
-import br.com.db.steps.customsteps.clientesstep.ValidarAPaginaClientesStep;
-import br.com.db.steps.customsteps.contatostep.ValidarAPaginaContatoStep;
-import br.com.db.steps.customsteps.oquefazemosstep.ValidarAPaginaOQueFazemosStep;
-import br.com.db.steps.customsteps.quemsomosstep.ValidarAPaginaQuemSomosStep;
+import br.com.db.steps.ValidarAPaginaClientesStep;
+import br.com.db.steps.ValidarAPaginaContatoStep;
+import br.com.db.steps.ValidarAPaginaOQueFazemosStep;
+import br.com.db.steps.ValidarAPaginaQuemSomosStep;
 import br.com.db.utils.BaseTest;
-import br.com.db.steps.customsteps.homestep.ValidarAPaginaInicialStep;
+import br.com.db.steps.ValidarAPaginaInicialStep;
 import br.com.db.webdrivers.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;

@@ -1,17 +1,17 @@
-package br.com.db.steps.customsteps.homestep;
+package br.com.db.steps;
 
-import br.com.db.pageobjects.custompageobjects.homepageobject.EntreEmContatoHomePageObject;
+import br.com.db.pageobjects.EntreEmContatoPageObject;
 import br.com.db.utils.Report;
 import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 
 public class EntreEmContatoHomeStep {
-    private final EntreEmContatoHomePageObject entreEmContatoPageObject;
+    private final EntreEmContatoPageObject entreEmContatoPageObject;
     private final Faker faker;
 
     public EntreEmContatoHomeStep(WebDriver _driver) {
-        entreEmContatoPageObject = new EntreEmContatoHomePageObject(_driver);
+        entreEmContatoPageObject = new EntreEmContatoPageObject(_driver);
         faker = new Faker();
     }
 

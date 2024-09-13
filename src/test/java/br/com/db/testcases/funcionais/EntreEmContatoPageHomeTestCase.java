@@ -1,6 +1,6 @@
 package br.com.db.testcases.funcionais;
 
-import br.com.db.steps.customsteps.homestep.EntreEmContatoHomeStep;
+import br.com.db.steps.EntreEmContatoHomeStep;
 import br.com.db.utils.BaseTest;
 import br.com.db.webdrivers.DriverManager;
 import org.openqa.selenium.WebDriver;

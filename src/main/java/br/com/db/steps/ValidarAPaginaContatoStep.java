@@ -1,6 +1,6 @@
-package br.com.db.steps.customsteps.contatostep;
+package br.com.db.steps;
 
-import br.com.db.pageobjects.custompageobjects.contatopageobject.ValidarAPaginaContatoPageObject;
+import br.com.db.pageobjects.ValidarAPaginaContatoPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
