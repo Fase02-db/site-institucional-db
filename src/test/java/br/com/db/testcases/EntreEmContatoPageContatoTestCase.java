@@ -1,4 +1,4 @@
-package br.com.db.testcases.funcionais;
+package br.com.db.testcases;
 
 import br.com.db.steps.EntreEmContatoStep;
 import br.com.db.webdrivers.DriverManager;

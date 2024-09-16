@@ -1,4 +1,4 @@
-package br.com.db.testcases.funcionais;
+package br.com.db.testcases;
 
 import br.com.db.steps.ValidarAPaginaClientesStep;
 import br.com.db.steps.ValidarAPaginaContatoStep;

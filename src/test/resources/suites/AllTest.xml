@@ -2,9 +2,9 @@
 <suite name = "AllTest" verbose="1">
     <test name = "Teste de todos elementos.">
         <classes>
-            <class name="br.com.db.testcases.funcionais.EntreEmContatoPageHomeTestCase"/>
-            <class name="br.com.db.testcases.funcionais.ValidarAsPaginasTestCase"/>
-            <class name="br.com.db.testcases.funcionais.EntreEmContatoPageContatoTestCase"/>
+            <class name="br.com.db.testcases.EntreEmContatoPageHomeTestCase"/>
+            <class name="br.com.db.testcases.ValidarAsPaginasTestCase"/>
+            <class name="br.com.db.testcases.EntreEmContatoPageContatoTestCase"/>
         </classes>
     </test>
 </suite>
