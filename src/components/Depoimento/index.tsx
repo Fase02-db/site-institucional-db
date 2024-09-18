@@ -64,7 +64,7 @@ const Imagem = styled.img`
 const Autor = styled.p`
     font-family: 'TTSupermolot-Bold', sans-serif; 
     font-size: 14px;
-    margin-top: 36px;
+    margin-top: 60px;
 `;
 
 interface DepoimentoComponentProps {
