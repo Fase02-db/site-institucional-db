@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Button, Form, Input, message, Modal } from 'antd'
+import React, { useState } from 'react'
+import { Button, Form, Input, message } from 'antd'
 import styled from 'styled-components'
 
 const DivContainer = styled.div`
@@ -70,7 +70,6 @@ const Formulario: React.FC = () => {
   const [email, setEmail] = useState<string>('')
   const [assunto, setAssunto] = useState<string>('')
   const [mensagem, setMensagen] = useState<string>('')
-  const [isModalVisible, setIsModalVisible] = useState(false)
 
   const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>) => {
     const valor = nome.target.value
@@ -108,6 +107,7 @@ const Formulario: React.FC = () => {
       form.resetFields()
     } catch (errorInfo) {
       message.error('Todos os campos obrigatorios devem ser preenchidos!')
+      console.log(errorInfo)
     }
   }
 
