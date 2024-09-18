@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Button, Form, Input } from 'antd'
+import React, { useState, useEffect } from 'react'
+import { Button, Form, Input, message, Modal } from 'antd'
 import styled from 'styled-components'
 
 const DivContainer = styled.div`
@@ -31,11 +31,11 @@ const DivCampos = styled.div`
   height: 125px;
   gap: 12px;
   display: flex;
+  flex-wrap: wrap;
 `
 const DivAreaDeTexto = styled.div`
   width: 100%;
   height: 197px;
-  margin-top: 16px;
   border: 1px solid #292929;
 `
 const { TextArea } = Input
@@ -70,6 +70,7 @@ const Formulario: React.FC = () => {
   const [email, setEmail] = useState<string>('')
   const [assunto, setAssunto] = useState<string>('')
   const [mensagem, setMensagen] = useState<string>('')
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
   const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>) => {
     const valor = nome.target.value
@@ -98,8 +99,16 @@ const Formulario: React.FC = () => {
     setMensagen(valor)
   }
 
+  const [form] = Form.useForm()
+
   const enviarFormulario = async (): Promise<void> => {
-    //verificar a igualdade de campos preenchidos e enviados.
+    try {
+      await form.validateFields()
+      message.success('Formulário enviado com sucesso!')
+      form.resetFields()
+    } catch (errorInfo) {
+      message.error('Todos os campos obrigatorios devem ser preenchidos!')
+    }
   }
 
   return (
@@ -110,10 +119,17 @@ const Formulario: React.FC = () => {
         através de um dos nossos canais de atendimento.
       </SubTitulo>
 
-      <DivFormulario>
+      <DivFormulario form={form}>
         <DivCampos>
           <DivStyled style={{ display: 'block', width: '328px' }}>
-            <Form.Item name="nome" style={{ margin: '0px' }}>
+            <Form.Item
+              name="nome"
+              rules={[
+                { required: true, message: 'Nome é obrigatório!' },
+                { min: 3, message: 'O nome deve ter pelo menos 3 caracteres!' },
+              ]}
+              style={{ margin: '0px' }}
+            >
               <DivInput>
                 <Input
                   style={{ border: 'none', boxShadow: 'none' }}
@@ -125,7 +141,20 @@ const Formulario: React.FC = () => {
               </DivInput>
             </Form.Item>
 
-            <Form.Item name="telefone">
+            <Form.Item
+              name="telefone"
+              rules={[
+                {
+                  required: true,
+                  message: 'Telefone é obrigatório!',
+                },
+                {
+                  pattern: /^\(\d{2}\)\d{5}-\d{4}$/,
+                  message: 'Formato inválido. Use (xx)xxxxx-xxxx',
+                },
+              ]}
+              style={{ margin: 0 }}
+            >
               <DivInput>
                 <Input
                   style={{ border: 'none', boxShadow: 'none' }}
@@ -139,7 +168,14 @@ const Formulario: React.FC = () => {
           </DivStyled>
 
           <DivStyled style={{ width: '637px' }}>
-            <Form.Item name="email" style={{ margin: '0px' }}>
+            <Form.Item
+              name="email"
+              rules={[
+                { required: true, message: 'Email é obrigatório!' },
+                { type: 'email', message: 'Formato de email inválido!' },
+              ]}
+              style={{ margin: '0px' }}
+            >
               <DivInput>
                 <Input
                   style={{ border: 'none', boxShadow: 'none' }}
@@ -151,7 +187,11 @@ const Formulario: React.FC = () => {
               </DivInput>
             </Form.Item>
 
-            <Form.Item name="assunto">
+            <Form.Item
+              name="assunto"
+              rules={[{ required: true, message: 'Assunto é obrigatório!' }]}
+              style={{ margin: 0 }}
+            >
               <DivInput>
                 <Input
                   style={{ border: 'none', boxShadow: 'none' }}
@@ -163,28 +203,27 @@ const Formulario: React.FC = () => {
               </DivInput>
             </Form.Item>
           </DivStyled>
+          <DivAreaDeTexto>
+            <Form.Item name="mensagem">
+              <TextArea
+                placeholder="Mensagem"
+                aria-label="Digite-aqui-a-mensagem"
+                style={{ border: 'none', boxShadow: 'none' }}
+                rows={8}
+                value={mensagem}
+                onChange={handlerMensagem}
+              />
+            </Form.Item>
+          </DivAreaDeTexto>
+          <DivStyled style={{ textAlign: 'right' }}>
+            <BotaoEnviar
+              aria-label="Clique-aqui-para-enviar-o-formulario"
+              onClick={enviarFormulario}
+            >
+              Enviar
+            </BotaoEnviar>
+          </DivStyled>
         </DivCampos>
-
-        <DivAreaDeTexto>
-          <Form.Item name="mensagem">
-            <TextArea
-              placeholder="Mensagem"
-              aria-label="Digite-aqui-a-mensagem"
-              style={{ border: 'none', boxShadow: 'none' }}
-              rows={8}
-              value={mensagem}
-              onChange={handlerMensagem}
-            />
-          </Form.Item>
-        </DivAreaDeTexto>
-        <DivStyled style={{ textAlign: 'right' }}>
-          <BotaoEnviar
-            aria-label="Clique-aqui-para-enviar-o-formulario"
-            onClick={enviarFormulario}
-          >
-            Enviar
-          </BotaoEnviar>
-        </DivStyled>
       </DivFormulario>
     </DivContainer>
   )
