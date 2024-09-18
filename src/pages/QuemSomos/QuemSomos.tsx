@@ -17,6 +17,8 @@ const SectionSobre = styled.section`
 
 const Image = styled.img`
   border-radius: 8px;
+  width: 544px;
+  height: 422px;
 `
 
 const SectionCards = styled.section`
@@ -46,6 +48,8 @@ const SectionCards = styled.section`
 
 const DivStyled = styled.div`
   padding-left: 70px;
+  width: 383px;
+  height: 422px;
 
   h4 {
     font-family: TTSupermolot-Bold;
@@ -54,7 +58,7 @@ const DivStyled = styled.div`
     line-height: 44.46px;
     text-align: left;
     margin: 0;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   p,
