@@ -4,6 +4,7 @@ import { Menu as AntMenu } from 'antd'
 import { useLocation, Link } from 'react-router-dom'
 
 const NavStyled = styled(AntMenu)`
+    border-inline-end:unset !important;
     .ant-menu-item {
       display: inline;
       font-family: 'TTSupermolot-Bold';
@@ -20,7 +21,7 @@ const NavStyled = styled(AntMenu)`
     }
 
     .ant-menu-item a {
-      color: inherit; 
+      color: inherit;
     }
 
     .ant-menu {
@@ -28,7 +29,7 @@ const NavStyled = styled(AntMenu)`
       margin: 0;
       width: 100%;
       background-color: #ffffff;
-      font-family: 'TTSupermolot-Bold';
+      font-family: 'TTSupermolot-Bold'; 
     }
 
     .ant-menu-submenu-title {
@@ -81,7 +82,7 @@ const HeaderComponent: React.FC = () => {
         selectedKeys={[location.pathname]}
         items={menuItems}
         className="custom-menu"
-      ></NavStyled>
+      />
     </HeanderStyled>
   )
 }
