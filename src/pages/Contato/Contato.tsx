@@ -78,14 +78,17 @@ const H5 = styled.h5`
   line-height: 22.14px;
 `
 const EntreEmContatoDiv = styled.div`
+  width: 977px;
+  height: 516px;
   clear: both;
   margin: 55px 0px 55px 0px;
   padding: 0;
   width: 71%;
   height: 600px;
+
 `
 const TelefoneDiv = styled.div`
-  width: 225px;
+  width: 221.21px;
   height: 44px;
   padding: 10px 10px 10px 0px;
   gap: 10px;
@@ -125,7 +128,7 @@ const Contato: React.FC = () => {
                 <Imagem src="/iconePhone.png" aria-label="icone-do-telefone" />
               </div>
               <H5 aria-label="telefone-da-empresa">
-                Telefone: +55 (51) 3322-6828
+                Telefone: <div>+55 (51) 3322-6828</div>
               </H5>
             </TelefoneDiv>
           </EnderecoFilialDiv>
@@ -146,7 +149,7 @@ const Contato: React.FC = () => {
                 />
               </div>
               <H5 aria-label="telefone-da-empresa-filial">
-                Telefone: +55 (11) 3064-0810
+                Telefone: <div>+55 (11) 3064-0810</div>
               </H5>
             </TelefoneDiv>
           </EnderecoFilialDiv>
