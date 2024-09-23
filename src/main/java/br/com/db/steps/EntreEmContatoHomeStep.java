@@ -6,13 +6,15 @@ import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Locale;
+
 public class EntreEmContatoHomeStep {
     private final EntreEmContatoPageObject entreEmContatoPageObject;
     private final Faker faker;
 
     public EntreEmContatoHomeStep(WebDriver _driver) {
         entreEmContatoPageObject = new EntreEmContatoPageObject(_driver);
-        faker = new Faker();
+        faker = new Faker(new Locale("pt-BR"));
     }
 
     public void preencherEEnviarOsFormulariosEmContato() {
