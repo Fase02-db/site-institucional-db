@@ -29,6 +29,6 @@ public class ValidarAPaginaContatoPageObject {
     }
 
     public WebElement tituloEntreEmContatoLabel() {
-        return waitElement.visibilityOf(By.cssSelector("#principal div.sc-eWPXlR.euxXCR h1"));
+        return waitElement.visibilityOf(By.cssSelector("#principal div.sc-eWPXlR.LXhMl div h1"));
     }
 }

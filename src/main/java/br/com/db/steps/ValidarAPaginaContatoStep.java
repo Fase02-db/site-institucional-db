@@ -34,6 +34,6 @@ public class ValidarAPaginaContatoStep {
     }
 
     private void validarEntreEmContato() {
-        Assert.assertEquals("Entre em contato", validarAPaginaContatoPageObject.tituloEntreEmContatoLabel().getText());
+       Assert.assertEquals("Entre em contato", validarAPaginaContatoPageObject.tituloEntreEmContatoLabel().getText());
     }
 }
