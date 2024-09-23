@@ -32,6 +32,7 @@ const DivCampos = styled.div`
   gap: 12px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: end;
 `
 const DivAreaDeTexto = styled.div`
   width: 100%;
