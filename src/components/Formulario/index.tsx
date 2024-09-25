@@ -49,7 +49,7 @@ const BotaoEnviar = styled(Button)`
   font-weight: 400;
   font-size: 16px;
   line-height: 18.65px;
-  background-color: #414aba;
+  background-color: #2E8B57;
   border-radius: 6px;
   color: #fff;
 `
