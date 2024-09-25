@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Form, Input } from 'antd'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 const DivContainer = styled.div`
   width: 977px;
@@ -73,6 +74,7 @@ const DivBotao = styled.div`
 `
 
 const Formulario: React.FC = () => {
+  const navigate = useNavigate();
   const [nome, setNome] = useState<string>('')
   const [telefone, setTelefone] = useState<string>('')
   const [email, setEmail] = useState<string>('')
@@ -109,6 +111,7 @@ const Formulario: React.FC = () => {
   const [form] = Form.useForm()
 
   const enviarFormulario = async (): Promise<void> => {
+    navigate('/clientes');
     // try {
     //   await form.validateFields()
     //   message.success('Formulário enviado com sucesso!')

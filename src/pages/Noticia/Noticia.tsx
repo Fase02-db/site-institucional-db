@@ -86,7 +86,7 @@ const Noticia: React.FC = () => {
   return (
     <>
       <HeaderStyled>
-        <Image src="/mulherjanela.png" />
+        <Image src="/mulherjanela1.png" />
       </HeaderStyled>
       <SectionSobre>
         <DivStyled>
