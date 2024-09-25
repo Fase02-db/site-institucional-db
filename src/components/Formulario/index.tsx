@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Input } from 'antd'
+import { Button, Form, Input, message } from 'antd'
 import styled from 'styled-components'
 
 const DivContainer = styled.div`
@@ -108,16 +108,16 @@ const Formulario: React.FC = () => {
 
   const [form] = Form.useForm()
 
-  // const enviarFormulario = async (): Promise<void> => {
-  // try {
-  //   await form.validateFields()
-  //   message.success('Formulário enviado com sucesso!')
-  //   form.resetFields()
-  // } catch (errorInfo) {
-  //   message.error('Todos os campos obrigatorios devem ser preenchidos!')
-  //   console.log(errorInfo)
-  // }
-  // }
+  const enviarFormulario = async (): Promise<void> => {
+    try {
+      await form.validateFields()
+      message.success('Formulário enviado com sucesso!')
+      form.resetFields()
+    } catch (errorInfo) {
+      message.error('Todos os campos obrigatorios devem ser preenchidos!')
+      console.log(errorInfo)
+    }
+  }
 
   return (
     <DivContainer>
@@ -226,7 +226,7 @@ const Formulario: React.FC = () => {
           <DivBotao>
             <BotaoEnviar
               aria-label="Clique-aqui-para-enviar-o-formulario"
-              // onClick={enviarFormulario}
+              onClick={enviarFormulario}
             >
                 Enviar
             </BotaoEnviar>
