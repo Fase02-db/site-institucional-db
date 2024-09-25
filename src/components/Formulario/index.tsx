@@ -77,7 +77,7 @@ const Formulario: React.FC = () => {
   const [telefone, setTelefone] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [assunto, setAssunto] = useState<string>('')
-  // const [mensagem, setMensagen] = useState<string>('')
+  const [mensagem, setMensagen] = useState<string>('')
 
   const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>) => {
     const valor = nome.target.value
@@ -99,12 +99,12 @@ const Formulario: React.FC = () => {
     setAssunto(valor)
   }
 
-  // const handlerMensagem = (
-  //   mensagem: React.ChangeEvent<HTMLTextAreaElement>,
-  // ) => {
-  //   const valor = mensagem.target.value
-  //   setMensagen(valor)
-  // }
+  const handlerMensagem = (
+    mensagem: React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
+    const valor = mensagem.target.value
+    setMensagen(valor)
+  }
 
   const [form] = Form.useForm()
 
