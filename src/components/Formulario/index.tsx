@@ -219,7 +219,7 @@ const Formulario: React.FC = () => {
           <DivStyled style={{ textAlign: 'right' }}>
             <BotaoEnviar
               aria-label="Clique-aqui-para-enviar-o-formulario"
-              onClick={enviarFormulario}
+              // onClick={enviarFormulario}
             >
               Enviar
             </BotaoEnviar>
