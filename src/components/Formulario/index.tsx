@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Input, message } from 'antd'
+import { Button, Form, Input } from 'antd'
 import styled from 'styled-components'
 
 const DivContainer = styled.div`
@@ -77,7 +77,7 @@ const Formulario: React.FC = () => {
   const [telefone, setTelefone] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [assunto, setAssunto] = useState<string>('')
-  const [mensagem, setMensagen] = useState<string>('')
+  // const [mensagem, setMensagen] = useState<string>('')
 
   const handlerNome = (nome: React.ChangeEvent<HTMLInputElement>) => {
     const valor = nome.target.value
@@ -99,25 +99,25 @@ const Formulario: React.FC = () => {
     setAssunto(valor)
   }
 
-  const handlerMensagem = (
-    mensagem: React.ChangeEvent<HTMLTextAreaElement>,
-  ) => {
-    const valor = mensagem.target.value
-    setMensagen(valor)
-  }
+  // const handlerMensagem = (
+  //   mensagem: React.ChangeEvent<HTMLTextAreaElement>,
+  // ) => {
+  //   const valor = mensagem.target.value
+  //   setMensagen(valor)
+  // }
 
   const [form] = Form.useForm()
 
-  const enviarFormulario = async (): Promise<void> => {
-    try {
-      await form.validateFields()
-      message.success('Formulário enviado com sucesso!')
-      form.resetFields()
-    } catch (errorInfo) {
-      message.error('Todos os campos obrigatorios devem ser preenchidos!')
-      console.log(errorInfo)
-    }
-  }
+  // const enviarFormulario = async (): Promise<void> => {
+  // try {
+  //   await form.validateFields()
+  //   message.success('Formulário enviado com sucesso!')
+  //   form.resetFields()
+  // } catch (errorInfo) {
+  //   message.error('Todos os campos obrigatorios devem ser preenchidos!')
+  //   console.log(errorInfo)
+  // }
+  // }
 
   return (
     <DivContainer>
@@ -224,13 +224,14 @@ const Formulario: React.FC = () => {
             </Form.Item>
           </DivAreaDeTexto>
           <DivBotao>
-              <BotaoEnviar
-                aria-label="Clique-aqui-para-enviar-o-formulario"
-              >
+            <BotaoEnviar
+              aria-label="Clique-aqui-para-enviar-o-formulario"
+              // onClick={enviarFormulario}
+            >
                 Enviar
-              </BotaoEnviar>
+            </BotaoEnviar>
           </DivBotao>
-        
+
         </DivCampos>
       </DivFormulario>
     </DivContainer>
