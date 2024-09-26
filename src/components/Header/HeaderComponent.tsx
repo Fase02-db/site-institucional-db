@@ -8,7 +8,7 @@ const NavStyled = styled(AntMenu)`
     .ant-menu-item {
       display: inline;
       font-family: 'TTSupermolot-Bold';
-      font-size: 18px;
+      font-size: 25px;
       font-weight: 400;
       line-height: 20px;
       letter-spacing: 0.02em;

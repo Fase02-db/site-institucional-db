@@ -1,8 +1,13 @@
 import {render, screen } from '@testing-library/react'
 import Contato from './Contato';
+import { MemoryRouter } from 'react-router-dom';
 describe('Teste da pagina de contato', () => {
   it('Deve renderizar os componentes da pagina de contato', () => {
-    render(<Contato/>);
+    render(
+      <MemoryRouter>
+        <Contato />
+      </MemoryRouter>
+    );
     const imagemTopoDaPagina = screen.getByRole('img', {name: 'imagem-topo-pagina'});
     const imagemDaFachadaDaEmpresa = screen.getByRole('img', {name: 'imagem-da-fachada-da-empresa'});
     const iconeDoTelefone = screen.getByRole('img', {name: 'imagem-icone-telefone'});

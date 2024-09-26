@@ -7,17 +7,39 @@ import Cliente from '../pages/Cliente/Cliente'
 import QuemSomos from '../pages/QuemSomos/QuemSomos'
 import HeaderComponent from '../components/Header/HeaderComponent'
 import Footer from '../components/Footer/Footer'
+import DelayRender from '../components/DelayRender'
 
 const Rotas: React.FC = () => (
   <Router>
     <HeaderComponent />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/quem-somos" element={<QuemSomos />} />
+      <Route
+        path="/quem-somos"
+        element={
+          <DelayRender delay={5000}>
+            <QuemSomos />
+          </DelayRender>
+        }
+      />
       <Route path="/clientes" element={<Cliente />} />
       <Route path="/cases" element={<Cases />} />
-      <Route path="/contato" element={<Contato />} />
-      <Route path="/noticia" element={<Noticia />} />
+      <Route
+        path="/contato"
+        element={
+          <DelayRender delay={5000}>
+            <Contato />
+          </DelayRender>
+        }
+      />
+      <Route
+        path="/noticia"
+        element={
+          <DelayRender delay={5000}>
+            <Noticia />
+          </DelayRender>
+        }
+      />
     </Routes>
     <Footer />
   </Router>

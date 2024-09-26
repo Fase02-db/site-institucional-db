@@ -125,7 +125,7 @@ const Cliente: React.FC = () => {
         </DivStyled>
         <LogoCliente>
           <img src="/stockcenter.svg" />
-          <img src="/carrefour.png" />
+          <img src="/carrefourpng"/>
           <img src="/walmart.png" />
         </LogoCliente>
         <LogoCliente>

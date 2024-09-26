@@ -105,7 +105,7 @@ const Contato: React.FC = () => {
         <Imagem src="/topContato.png" aria-label="imagem-topo-pagina" />
       </HeaderImgDiv>
       <TituloDiv>
-        <TituloH1 aria-label="titulo-nosso-endereço">Nossos endereços</TituloH1>
+        <TituloH1 aria-label="titulo-nosso-endereço">Nosso enderecos</TituloH1>
       </TituloDiv>
       <DadosEmpresa>
         <FotoEmpresaDiv>

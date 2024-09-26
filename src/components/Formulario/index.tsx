@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Button, Form, Input, message } from 'antd'
+import { Button, Form, Input } from 'antd'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 const DivContainer = styled.div`
   width: 977px;
@@ -49,7 +50,7 @@ const BotaoEnviar = styled(Button)`
   font-weight: 400;
   font-size: 16px;
   line-height: 18.65px;
-  background-color: #414aba;
+  background-color: #2E8B57;
   border-radius: 6px;
   color: #fff;
 `
@@ -64,8 +65,16 @@ const DivInput = styled.div`
   border-radius: 8px;
   display: flex;
 `
-const DivStyled = styled.div``
+const DivStyled = styled.div`
+`
+const DivBotao = styled.div`
+   width: 100%;
+   height: 56px;
+   border: none;
+`
+
 const Formulario: React.FC = () => {
+  const navigate = useNavigate();
   const [nome, setNome] = useState<string>('')
   const [telefone, setTelefone] = useState<string>('')
   const [email, setEmail] = useState<string>('')
@@ -102,14 +111,15 @@ const Formulario: React.FC = () => {
   const [form] = Form.useForm()
 
   const enviarFormulario = async (): Promise<void> => {
-    try {
-      await form.validateFields()
-      message.success('Formulário enviado com sucesso!')
-      form.resetFields()
-    } catch (errorInfo) {
-      message.error('Todos os campos obrigatorios devem ser preenchidos!')
-      console.log(errorInfo)
-    }
+    navigate('/clientes');
+    // try {
+    //   await form.validateFields()
+    //   message.success('Formulário enviado com sucesso!')
+    //   form.resetFields()
+    // } catch (errorInfo) {
+    //   message.error('Todos os campos obrigatorios devem ser preenchidos!')
+    //   console.log(errorInfo)
+    // }
   }
 
   return (
@@ -122,7 +132,7 @@ const Formulario: React.FC = () => {
 
       <DivFormulario form={form}>
         <DivCampos>
-          <DivStyled style={{ display: 'block', width: '328px' }}>
+          <DivStyled style={{ display: 'block', width: '328px'}}>
             <Form.Item
               name="nome"
               rules={[
@@ -168,7 +178,7 @@ const Formulario: React.FC = () => {
             </Form.Item>
           </DivStyled>
 
-          <DivStyled style={{ width: '637px' }}>
+          <DivStyled style={{ width: '637px'}}>
             <Form.Item
               name="email"
               rules={[
@@ -216,14 +226,15 @@ const Formulario: React.FC = () => {
               />
             </Form.Item>
           </DivAreaDeTexto>
-          <DivStyled style={{ textAlign: 'right' }}>
+          <DivBotao>
             <BotaoEnviar
               aria-label="Clique-aqui-para-enviar-o-formulario"
               onClick={enviarFormulario}
             >
-              Enviar
+                Enviar
             </BotaoEnviar>
-          </DivStyled>
+          </DivBotao>
+
         </DivCampos>
       </DivFormulario>
     </DivContainer>
