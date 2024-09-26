@@ -32,7 +32,7 @@ export const StringsApp = {
   tituloCardVeterinaria: 'Inteligência artificial na Veterinária',
   tituloCardTecnoPet: 'Integrando tecnologia e bem-estar pet',
   tituloServicosOferecidos: 'Serviços oferecidos',
-  tituloQuemSomos: 'SOMOS UMA EMPRESA DE TECNOLOGIA.',
+  tituloQuemSomos: 'SOMUS UMA EMPRESA DE TECNOLOHIA.',
   resumoDepoimentoDois:
     '"Contratar os serviços da empresa ABC foi uma das melhores decisões para nossa empresa. Eles implementaram soluções tecnológicas inovadoras que aumentaram nossa eficiência e produtividade. A equipe é extremamente profissional e dedicada, sempre pronta para resolver problemas e oferecer suporte. Recomendo a ABC para qualquer empresa que deseja crescer e se destacar no mercado."',
   resumoSobreQuemSomosParagrafoUm:
