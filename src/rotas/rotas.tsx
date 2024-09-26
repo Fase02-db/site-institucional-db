@@ -46,14 +46,4 @@ const Rotas: React.FC = () => (
   </Router>
 )
 
-const Error500: React.FC = () => {
-  useEffect(() => {
-    fetch('/erro500').catch((err) =>
-      console.error('Erro ao acessar a rota:', err),
-    )
-  }, [])
-
-  return <div>Estamos enfrentando um erro interno do servidor.</div>
-}
-
 export default Rotas
